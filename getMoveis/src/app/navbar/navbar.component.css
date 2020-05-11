@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+/* Barra com as promoções do Header */
+.topbar {
+    padding-top: 10px;
+    justify-content: center;
+    background-image: linear-gradient(to left, #2f2f2f, #000000);
+    text-align: center;
+}
+
+#logoIcon {
+    display: flex;
+    width: 125px;
+    height: 40px;
+    float: left;
+}
+#login {
+    display: flex;
+    
+}
+
+#carrinho {
+    display: flex;
+}
+.form-control mr-sm-2 {
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    display: center;
+}
+/* Final da Barra com as promoções do Header */
+
+
+.navbar{
+    justify-content: center;
+}
+.nav-link{
+    color: black;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.nav-link:hover{
+    color: white;
+    background-color:  #915b4a;
+}
+.faq-accordion{
+    text-decoration: none;
+    color: #915b4a;
+    font-size: 14px;
+}
+.btn-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+#textoDuvida {
+    text-decoration: none;
+    text-align: center;
+    font-size: large;
+    
+}
+.container
+{
+    padding-top: 25px;
+}
+
+@media (min-width: 576px){
+    .form-inline .form-control {
+        width: 850px;
+        margin-left: 20px;
+    }
+}

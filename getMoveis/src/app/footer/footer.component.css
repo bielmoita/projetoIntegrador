@@ -1,0 +1,104 @@
+/* -------AQUI INICIA O FOOTER------*/
+
+/* CONFIGURAÇÃO CAIXA FOOTER DA SEÇÃO*/
+
+.footerItens{
+    
+    width: 100%;
+    height: 210px;
+    background-color: rgb(248, 249, 250);
+    border-top: #000000 2px solid;
+}
+
+/* FIM DA CONFIGURAÇÃO CAIXA FOOTER DAS SEÇÃO*/
+
+/* SEÇÃO  GET MÓVEIS | PRODUTOS | CONTATOS */
+#getFooter{
+    float: left;
+    text-align: center;
+    width: 33%;
+    height: 160px;
+    border-right: 0.1px solid #ced4da;    
+}
+
+
+#produtosFooter{
+    float: left;
+    text-align: center;
+    width: 33%;
+    height: 160px;
+    border-right: 0.1px solid #ced4da;  
+}
+
+#contatosFooter{
+    float: left;
+    text-align: center;
+    width: 33%;
+    height: 150px;
+}
+
+/* FIM DA SEÇÃO  GET MÓVEIS | PRODUTOS | CONTATOS */
+
+/* CONFIGURAÇÃO DA BARRA REDE SOCIAL + DADOS + ICONES DE PAGAMENTO. */
+
+#rodapeFooter{
+    width: 100%;
+    height: 80px;
+    color: white;
+    background-color: black;
+}
+
+/*  FIM CONFIGURAÇÃO DA BARRA REDE SOCIAL + DADOS + ICONES DE PAGAMENTO. */
+
+/* ICONES DAS REDES SOCIAIS */
+
+#redessociaisFooter{
+    padding-top: 20px;
+    float:left;
+}
+
+#facebookFooter{
+    margin-left: 50px;
+    float: left;
+    background-color: white;
+    border: 1px  solid black;
+    border-radius: 25px;
+}
+
+#instagramFooter{
+    margin-left: 10px;
+    float: left;
+    background-color: white;
+    border: 1px  solid black;
+    border-radius: 25px;
+}
+
+#twitterFooter{
+    margin-left: 10px;
+    float: left;
+    background-color: white;
+    border: 1px  solid black;
+    border-radius: 25px;
+}
+/* FIM DOS ICONES */
+
+
+/* TEXTO COM CNPJ E DEMAIS DADOS DA EMPRESA */
+#infoRodape{
+    padding-top: 30px;
+    text-align: center;
+    margin-left: 210px;
+}
+
+/* FIM - TEXTO COM CNPJ E DEMAIS DADOS DA EMPRESA */
+
+
+/* ICONES DE PAGAMENTO */
+
+#PagamentoFooter{
+    padding-top: 10px;
+    float: right;
+    padding-right: 50px;
+}
+/* FIM - ICONES DE PAGAMENTO */
+/* ---------FIM DO FOOTER---------- */

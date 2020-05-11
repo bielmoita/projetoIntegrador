@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+}
+.container
+{
+    padding-top: 25px;
+}
+
+@media (min-width: 576px){
+    .form-inline .form-control {
+        width: 850px;
+        margin-left: 20px;
+    }
+}

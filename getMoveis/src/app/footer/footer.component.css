@@ -21,6 +21,9 @@
     border-right: 0.1px solid #ced4da;    
 }
 
+#linkSobrenos{
+    cursor: pointer;
+}
 
 #produtosFooter{
     float: left;
@@ -30,11 +33,19 @@
     border-right: 0.1px solid #ced4da;  
 }
 
+#linkContato{
+    cursor: pointer;
+}
+
 #contatosFooter{
     float: left;
     text-align: center;
     width: 33%;
     height: 150px;
+}
+
+#linkFAQ{
+    cursor: pointer;
 }
 
 /* FIM DA SEÇÃO  GET MÓVEIS | PRODUTOS | CONTATOS */

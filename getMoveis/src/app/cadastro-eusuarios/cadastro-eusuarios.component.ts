@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../service/usuario.service';
-import { Usuario } from '../model/Usuario';
+import { User } from '../model/User';
 
 @Component({
   selector: 'app-cadastro-eusuarios',
@@ -9,15 +9,19 @@ import { Usuario } from '../model/Usuario';
 })
 export class CadastroEUsuariosComponent implements OnInit {
 
-  listaUsuarios: Usuario[]
+  listaUsuarios: User[]
 
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
+
+    this.findAllUsuarios()
+    window.scroll(0, 0)
+
   }
 
   findAllUsuarios() {
-    this.usuarioService.getAllUsuarios().subscribe((resp: Usuario[]) => {
+    this.usuarioService.getAllUsuarios().subscribe((resp: User[]) => {
       this.listaUsuarios = resp
     })
   }

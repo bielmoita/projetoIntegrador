@@ -1,57 +1,55 @@
-<footer>
-    <div class="footerItens">
-        <br>
-        <div id="getFooter">
+<footer class="container-fluid">
+    
+    <div class="footerItens row">
+        <div class="getFooter col-md-4 text-center mt-2">
             <h5 id="linkSobrenos" routerLink='/sobrenos'>SOBRE A GETMÓVEIS</h5>
             <br>
-            <p style="margin: 0 15px 0;">Somos uma empresa cujo o proposito é trazer produtos de qualidade por um preço
-                acessível a nossos clientes.</p>
+            <p class="p-2 mb-1" style="margin: 0 15px 0;">Somos uma empresa cujo o proposito é trazer produtos de qualidade por um preço acessível a nossos clientes.</p>
         </div>
 
-        <div id="produtosFooter">
+        <div class="produtosFooter col-md-4 text-center mt-2">
             <h5>PRINCIPAIS PRODUTOS</h5>
-            <ul style="list-style: none;">
-                <li><a href="#">Sofás</a></li>
-                <li><a href="#">Poltronas</a></li>
-                <li><a href="#">Cadeiras</a></li>
-                <li><a href="#">Mesas</a></li>
-                <li><a href="#">Hacks</a></li>
+            <ul class="p-2 mb-1" style="list-style: none;">
+                    <li><a class="liCorProdutos" href="#"><strong>Sofás</strong></a></li>
+                    <li><a class="liCorProdutos" href="#"><strong>Poltronas</strong></a></li>
+                    <li><a class="liCorProdutos" href="#"><strong>Cadeiras</strong></a></li>
+                    <li><a class="liCorProdutos" href="#"><strong>Mesas</strong></a></li>
+                    <li><a class="liCorProdutos" href="#"><strong>Hacks</strong></a></li>
             </ul>
         </div>
 
-        <div id="contatosFooter">
+        <div class="contatosFooter col-md-4 text-center mt-2">
             <h5 id="linkContato" routerLink='/contato'>CONTATO</h5>
-            <ul style="list-style: none;">
-                <li style="margin-top: 20px;"><img src="img/Contatos/telefone.png" width="20px" hspace="10"> 11
-                    0000-0000</li>
-                <li style="margin: 10px 0 10px 75px;"><img src="img/Contatos/email.png" width="20px" hspace="10"
-                        margin-left="10px"> getmoveis6@gmail.com</li>
-                <li style="margin-left: 5px;"><img src="img/Contatos/home.png" width="20px" hspace="10"> São Paulo - SP
-                </li>
+            <ul class="p-3 mb-1" style="list-style: none;">
+                <li><fa-icon [icon]="faPhoneVolume"></fa-icon> 11 0000-0000</li>
+                <li><fa-icon [icon]="faEnvelope"></fa-icon> getmoveis6@gmail.com</li>
+                <li><fa-icon [icon]="faHome"></fa-icon> São Paulo - SP</li>
+                <h5 id="linkFAQ" routerLink='/faq'>FAQ</h5>
             </ul>
-            <h5 id="linkFAQ" style='margin-right: 40px;' routerLink='/faq'>FAQ</h5>
-        </div>
-    </div>
-    <div id="rodapeFooter">
-        <div id="redessociaisFooter">
-            <ul style="list-style: none;">
-                <li id="facebookFooter"><a href="http://facebook.com"><img src="img/redes-sociais/facebook.png"
-                            width="35px"></a></li>
-                <li id="instagramFooter"><a href="http://instagram.com"><img src="img/redes-sociais/instagram.png"
-                            width="35px"></a></li>
-                <li id="twitterFooter"><a href="http://twitter.com"><img src="img/redes-sociais/twitter.png"
-                            width="35px"></a></li>
-            </ul>
-        </div>
-        <div id="PagamentoFooter">
-            <h6>Formas de Pagamento:</h6>
-            <img style="padding-left: 25px;" src="img/pagamento/dinheiro.png" alt="Pagamento em dinheiro">
-            <img src="img/pagamento/visa.png" alt="Cartão Visa">
-            <img src="img/pagamento/master.png" alt="Cartão Master">
-        </div>
-        <div id="infoRodape">
-            <p>GetMóveis - CNPJ:00.000.000/0000-00</p>
         </div>
     </div>
 
+    <div class="rodapeFooter row">
+        
+        <div class="redessociaisFooter col-md-4">
+            <ul style="list-style: none;">
+                <li id="facebookFooter"><a href="http://facebook.com"><fa-icon [icon]="faFacebook" class="faFacebook fa-3x p-2"></fa-icon></a></li>
+                <li id="instagramFooter"><a href="http://instagram.com"><fa-icon [icon]="faInstagram" class="faInstagram fa-3x p-2"></fa-icon></a></li>
+                <li id="twitterFooter"><a href="http://twitter.com"><fa-icon [icon]="faTwitter" class="faTwitter fa-3x p-2"></fa-icon></a></li>
+                <li id="linkedinFooter"><a href="https://br.linkedin.com"><fa-icon [icon]="faLinkedin" class="faLinkedin fa-3x p-2"></fa-icon></a></li>
+            </ul>
+        </div>
+
+        <div class="infoRodape col-md-4 text-center">
+            <p class="mt-4">GetMóveis - CNPJ:00.000.000/0000-00</p>
+        </div>
+
+        <div class="PagamentoFooter col-md-4 text-center p-2">
+            <h6>Formas de Pagamento:</h6>
+            <fa-icon [icon]="faCcVisa" class="faCcVisa p-2" alt="Cartão Visa"></fa-icon>
+            <fa-icon [icon]="faCcMastercard" class="faCcMastercard p-2" alt="Cartão Visa"></fa-icon>
+            <fa-icon [icon]="faMoneyBillWaveAlt" class="faMoneyBillWaveAlt p-2" alt="Dinheiro"></fa-icon>
+        </div>
+    </div>
+                                
 </footer>

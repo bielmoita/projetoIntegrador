@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { UsuarioService } from '../service/usuario.service';
 import { User } from '../model/User';
 
@@ -28,10 +28,17 @@ export class CadastroEUsuariosComponent implements OnInit {
   }
 
   cadastrar() {
-    this.usuarioService.postUsuario(this.user).subscribe((resp: User) => {
-      this.user = resp
-      location.assign('/cadastro')
-    })
+    if (this.user.senha == this.user.senha2) {
+
+      this.usuarioService.postUsuario(this.user).subscribe((resp: User) => {
+        this.user = resp
+        location.assign('/cadastro')
+      })
+    }
+
+
   }
+
+
 
 }

@@ -12,6 +12,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { CadastroEUsuariosComponent } from './cadastro-eusuarios/cadastro-eusuarios.component';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

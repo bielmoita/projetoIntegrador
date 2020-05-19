@@ -10,6 +10,7 @@ import { User } from '../model/User';
 export class CadastroEUsuariosComponent implements OnInit {
 
   listaUsuarios: User[]
+  user: User = new User
 
   constructor(private usuarioService: UsuarioService) { }
 
@@ -23,6 +24,13 @@ export class CadastroEUsuariosComponent implements OnInit {
   findAllUsuarios() {
     this.usuarioService.getAllUsuarios().subscribe((resp: User[]) => {
       this.listaUsuarios = resp
+    })
+  }
+
+  cadastrar() {
+    this.usuarioService.postUsuario(this.user).subscribe((resp: User) => {
+      this.user = resp
+      location.assign('/cadastro')
     })
   }
 

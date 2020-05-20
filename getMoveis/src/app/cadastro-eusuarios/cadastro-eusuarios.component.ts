@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core'; //Typescript cadastro
 import { UsuarioService } from '../service/usuario.service';
 import { User } from '../model/User';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-eusuarios',
@@ -12,12 +13,32 @@ export class CadastroEUsuariosComponent implements OnInit {
   listaUsuarios: User[]
   user: User = new User
 
-  constructor(private usuarioService: UsuarioService) { }
+  valSenha:boolean = false
+
+  alerta:boolean = false
+
+  constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
 
     this.findAllUsuarios()
     window.scroll(0, 0)
+
+    let item: string = localStorage.getItem('valSenha')
+
+    if (item == "true")
+    {
+      this.alerta = true
+      localStorage.clear()
+
+      setTimeout(()=>{
+        location.assign('/cadastro')
+      }, 5000)
+
+      
+    }
+
+
 
   }
 
@@ -26,19 +47,41 @@ export class CadastroEUsuariosComponent implements OnInit {
       this.listaUsuarios = resp
     })
   }
-
+  
   cadastrar() {
-    if (this.user.senha == this.user.senha2) {
-
+    if (this.user.senha == this.user.senha2)
+    {
       this.usuarioService.postUsuario(this.user).subscribe((resp: User) => {
         this.user = resp
         location.assign('/cadastro')
+        this.valSenha = false
       })
+
     }
+    else{
+      this.valSenha = true
+      // this.router.navigate(['/cadastro'])
+      localStorage.setItem("valSenha", this.valSenha.toString())
+      err => {
+        console.log(`Erro: ${err.status}, Não conseguimos validar a senha`);
+      }
+      
 
+      
+      
 
+    }
+       
   }
-
-
-
+  
+    
 }
+
+  // cadastrar() {
+  //   this.usuarioService.postUsuario(this.user).subscribe((resp: User) => {
+  //     this.user = resp
+  //     location.assign('/cadastro')
+  //   })
+  // }
+
+

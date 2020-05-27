@@ -20,7 +20,7 @@
 }
 
 .liCorProdutos{
-    color: brown;
+    color: #4f2c14;
 }
 
 #linkSobrenos{
@@ -53,7 +53,12 @@
 }
 
 .faFacebook, .faInstagram, .faTwitter, .faLinkedin{
-    color: brown;
+    color: white;
 }
+
+.faFacebook:hover, .faInstagram:hover, .faTwitter:hover, .faLinkedin:hover{
+    color: #4f2c14;
+}
+
 /* FIM DOS ICONES */
 /* ---------FIM DO FOOTER---------- */

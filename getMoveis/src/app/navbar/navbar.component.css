@@ -1,6 +1,5 @@
-*{
-    box-sizing: border-box;
-    padding: 0px;
+* {
+    justify-content: center;
 }
 
 /* Barra com as promoções do Header */
@@ -11,30 +10,26 @@
     text-align: center;
 }
 
-#logoIcon {
-    display: flex;
-    width: 125px;
-    height: 40px;
-    float: left;
-}
-#login {
-    display: flex;
-    
-}
-
-#carrinho {
-    display: flex;
-}
-.form-control mr-sm-2 {
-    width: 150px;
-    align-items: center;
-    text-align: center;
-    display: center;
-}
 /* Final da Barra com as promoções do Header */
 
+#logoIcon {
+    width: 70%;
+}
 
-.navbar{
+.form-control{
+    width: 100%;
+}
+/* #pesquisar{
+    width: 30%;
+}
+#login{
+    width: 30%;
+}
+#carrinho{
+    width: 30%;
+} */
+
+/* .navbar{
     justify-content: center;
 }
 .nav-link{
@@ -65,11 +60,11 @@
 .container
 {
     padding-top: 25px;
-}
+} */
 
-@media (min-width: 576px){
+ /* @media (min-width: 576px){
     .form-inline .form-control {
         width: 850px;
         margin-left: 20px;
     }
-}
+}  */

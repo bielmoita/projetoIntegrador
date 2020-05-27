@@ -20,9 +20,18 @@ export class UsuarioService {
     return this.http.post('http://93.188.161.223:9000/user', usuario)
   }
 
+<<<<<<< HEAD
 
   deleteUsuario(id:number) {
     return this.http.delete(`http://93.188.161.223:9000/user/${id}`)
+=======
+  putUsuario(usuario: User) {
+    return this.http.put('http://93.188.161.223:9000/user', usuario)
+  }
+
+  getByIdUsuario(id: number) {
+    return this.http.get(`http://93.188.161.223:9000/user/${id}`)
+>>>>>>> 7f0415af81034f3e020735b3111dde5c134e20f4
   }
 
 }

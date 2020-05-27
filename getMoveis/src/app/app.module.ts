@@ -13,7 +13,11 @@ import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { CadastroEUsuariosComponent } from './cadastro-eusuarios/cadastro-eusuarios.component';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { DeletarComponent } from './deletar/deletar.component'
+=======
+import { EditarComponent } from './editar/editar.component'
+>>>>>>> 7f0415af81034f3e020735b3111dde5c134e20f4
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { DeletarComponent } from './deletar/deletar.component'
     ContatoComponent,
     SobrenosComponent,
     CadastroEUsuariosComponent,
+<<<<<<< HEAD
     DeletarComponent
+=======
+    EditarComponent
+>>>>>>> 7f0415af81034f3e020735b3111dde5c134e20f4
   ],
   imports: [
     BrowserModule,

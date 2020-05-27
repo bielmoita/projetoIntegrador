@@ -12,7 +12,8 @@ import { ContatoComponent } from './contato/contato.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { CadastroEUsuariosComponent } from './cadastro-eusuarios/cadastro-eusuarios.component';
 import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { EditarComponent } from './editar/editar.component'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms'
     FAQComponent,
     ContatoComponent,
     SobrenosComponent,
-    CadastroEUsuariosComponent
+    CadastroEUsuariosComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

@@ -13,9 +13,9 @@ export class CadastroEUsuariosComponent implements OnInit {
   listaUsuarios: User[]
   user: User = new User
 
-  valSenha:boolean = false
+  valSenha: boolean = false
 
-  alerta:boolean = false
+  alerta: boolean = false
 
   constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
 
@@ -26,16 +26,15 @@ export class CadastroEUsuariosComponent implements OnInit {
 
     let item: string = localStorage.getItem('valSenha')
 
-    if (item == "true")
-    {
+    if (item == "true") {
       this.alerta = true
       localStorage.clear()
 
-      setTimeout(()=>{
+      setTimeout(() => {
         location.assign('/cadastro')
       }, 5000)
 
-      
+
     }
 
 
@@ -47,10 +46,9 @@ export class CadastroEUsuariosComponent implements OnInit {
       this.listaUsuarios = resp
     })
   }
-  
+
   cadastrar() {
-    if (this.user.senha == this.user.senha2)
-    {
+    if (this.user.senha == this.user.senha2) {
       this.usuarioService.postUsuario(this.user).subscribe((resp: User) => {
         this.user = resp
         location.assign('/cadastro')
@@ -58,23 +56,24 @@ export class CadastroEUsuariosComponent implements OnInit {
       })
 
     }
-    else{
+    else {
       this.valSenha = true
       // this.router.navigate(['/cadastro'])
       localStorage.setItem("valSenha", this.valSenha.toString())
+      location.assign('/cadastro')
       err => {
         console.log(`Erro: ${err.status}, Não conseguimos validar a senha`);
       }
-      
 
-      
-      
+
+
+
 
     }
-       
+
   }
-  
-    
+
+
 }
 
   // cadastrar() {

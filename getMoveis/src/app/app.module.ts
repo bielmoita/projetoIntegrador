@@ -11,7 +11,8 @@ import { FAQComponent } from './faq/faq.component';
 import { ContatoComponent } from './contato/contato.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { CadastroEUsuariosComponent } from './cadastro-eusuarios/cadastro-eusuarios.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http'
     FAQComponent,
     ContatoComponent,
     SobrenosComponent,
-    CadastroEUsuariosComponent
+    CadastroEUsuariosComponent,
+    UsuarioEditarComponent
   ],
   imports: [
     BrowserModule,

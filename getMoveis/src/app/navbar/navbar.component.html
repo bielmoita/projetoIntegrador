@@ -10,32 +10,25 @@
 <div class="navbar navbar-light bg-light">
     <div class="row">
 
-        <div class="col-2">
+        <div class="col-1 p-0 d-flex align-items-center">
             <a routerLink='/home'><img a routerLink='/home' id="logoIcon" src="assets/img/nav/get_home.png"
-                    alt="Logo GET Móveis"></a>
+                    alt="Logo GET Móveis" class="rounded"></a>
             <!-- <img a href="#HOME" id="logoIcon" src="../assets/img/getmoveislogo2.png" alt="Logo GET Móveis"> -->
         </div>
-        <div class="col-7">
+        <div class="col-8 pr-0 pl-4">
             <div class="campoPesquisar">
                 <input class="form-control mr-sm-2 buscar" type="search" placeholder="O que você procura?"
                     aria-label="Search">
             </div>
         </div>
-        <div class="col-1 p-0 text-right">
-            <div id="pesquisar">
-                <button class="btn-sm btn-outline-dark" type="submit">PESQUISAR</button>
-            </div>
-
+        <div class="col-1 p-0 text-center" id="pesquisar">
+            <button class="btn-sm btn-outline-dark h-100" type="submit">PESQUISAR</button>
         </div>
-        <div class="col-1 p-0 text-center">
-            <div id="login">
-                <button class="btn-sm btn-outline-dark" type="submit" routerLink='cadastro'>LOGIN</button>
-            </div>
+        <div class="col-1 p-0 text-right" id="login">
+            <button class="btn-sm btn-outline-dark h-100" type="submit" routerLink='cadastro'>LOGIN</button>
         </div>
-        <div class="col-1 p-0 text-left">
-            <div id="carrinho">
-                <button class="btn-sm btn-outline-dark" type="submit">CARRINHO</button>
-            </div>
+        <div class="col-1 px-1 text-left" id="carrinho">
+            <button class="btn-sm btn-outline-dark h-100" type="submit">CARRINHO</button>
         </div>
 
     </div>

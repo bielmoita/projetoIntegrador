@@ -14,12 +14,15 @@ export class CadastroEUsuariosComponent implements OnInit {
   user: User = new User
 
   valSenha: boolean = false
-
   alerta: boolean = false
+
+  deletou:boolean = false
+  delOk: boolean = false
+
 
   constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
 
     this.findAllUsuarios()
     window.scroll(0, 0)
@@ -28,6 +31,18 @@ export class CadastroEUsuariosComponent implements OnInit {
 
     if (item == "true") {
       this.alerta = true
+      localStorage.clear()
+
+      setTimeout(() => {
+        location.assign('/cadastro')
+      }, 5000)
+
+
+    }
+
+    let item2: string = localStorage.getItem('delOk')
+    if (item2 == "true") {
+      this.deletou = true
       localStorage.clear()
 
       setTimeout(() => {

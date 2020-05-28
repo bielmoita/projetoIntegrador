@@ -28,4 +28,9 @@ export class UsuarioService {
     return this.http.get(`http://93.188.161.223:9000/user/${id}`)
   }
 
+  //Delete
+  deleteUsuario(id: number) {
+    return this.http.delete(`http://93.188.161.223:9000/user/${id}`)
+  }
+
 }

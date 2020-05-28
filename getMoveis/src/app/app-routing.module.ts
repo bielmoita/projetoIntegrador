@@ -6,6 +6,7 @@ import { FAQComponent } from './faq/faq.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { CadastroEUsuariosComponent } from './cadastro-eusuarios/cadastro-eusuarios.component';
 import { EditarComponent } from './editar/editar.component';
+import { DeletarComponent } from './deletar/deletar.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'faq', component: FAQComponent },
   { path: 'sobrenos', component: SobrenosComponent },
   { path: 'cadastro', component: CadastroEUsuariosComponent },
-  { path: 'editar/:id', component: EditarComponent }
+  { path: 'editar/:id', component: EditarComponent },
+  { path: 'deletar/:id', component: DeletarComponent}
 ];
 
 @NgModule({

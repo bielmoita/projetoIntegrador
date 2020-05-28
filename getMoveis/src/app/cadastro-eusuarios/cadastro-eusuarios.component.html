@@ -50,6 +50,13 @@
 
             <h3 class="text-monospace text-center mb-5">Veja quem está cadastrado na GetMoveis</h3>
 
+            <div *ngIf='deletou'>
+                <div class="alert alert-success" role="alert">
+                    Usuario apagado com sucesso.
+                </div>
+
+            </div>
+
 
 
             <div class="card mb-4" *ngFor="let user of listaUsuarios">
@@ -67,7 +74,7 @@
                                 Editar
                             </button>
 
-                            <button class="btn btn-outline-danger">Apagar</button>
+                            <button class="btn btn-outline-danger" [routerLink] = "['/deletar', user.id]" >Apagar</button>
 
                         </div>
 

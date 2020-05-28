@@ -25,14 +25,40 @@
 
 #linkSobrenos{
     cursor: pointer;
+    transition: all 0.5s;
+}
+#linkSobrenos:hover{
+    color: white;
+    background-color:  #915b4a;
 }
 
-#linkContato{
+
+.linkFAQ{
+    display: flex;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    transition: all 0.5s;
     cursor: pointer;
 }
+.linkFAQ:hover{
+    color: white;
+    background-color:  #915b4a;
+}
 
-#linkFAQ{
+.linkContato{
+    display: flex;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    transition: all 0.5s;
     cursor: pointer;
+}
+.linkContato:hover{
+    color: white;
+    background-color:  #915b4a;
 }
 
 /* FIM DA SEÇÃO  GET MÓVEIS | PRODUTOS | CONTATOS */

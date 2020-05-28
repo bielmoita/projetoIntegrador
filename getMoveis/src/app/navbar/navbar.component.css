@@ -4,13 +4,14 @@
 
 /* Barra com as promoções do Header */
 .topbar {
-    padding-top: 10px;
     justify-content: center;
     background-image: linear-gradient(to left, #2f2f2f, #000000);
     text-align: center;
 }
 
 /* Final da Barra com as promoções do Header */
+
+/* Início Barra do meio */
 
 #logoIcon {
     width: 70%;
@@ -19,6 +20,27 @@
 .form-control{
     width: 100%;
 }
+
+/* Final Barra do meio */
+
+/* Ínicio Barra de categorias */
+
+
+.navbar{
+    justify-content: center;
+}
+.nav-link{
+    color: #915b4a;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+.nav-link:hover{
+    color: white;
+    background-color:  #915b4a;
+}
+
+/* Final Barra de categorias */
+
 /* #pesquisar{
     width: 30%;
 }

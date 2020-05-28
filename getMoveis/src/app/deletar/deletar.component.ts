@@ -10,13 +10,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DeletarComponent implements OnInit {
 
-  user:User = new User
-  delOK:boolean = false
+  user: User = new User
+  delOK: boolean = false
 
   constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    let id:number = this.route.snapshot.params['id']
+    let id: number = this.route.snapshot.params['id']
     this.findById(id)
 
   }
@@ -29,11 +29,11 @@ export class DeletarComponent implements OnInit {
     })
   }
 
-  btnSim(){
-    this.usuarioService.deleteUsuario(this.user.id).subscribe(()=>{
+  btnSim() {
+    this.usuarioService.deleteUsuario(this.user.id).subscribe(() => {
       this.delOK = true
-      this.router.navigate(['/cadastro'])
       localStorage.setItem("delOK", this.delOK.toString())
+      this.router.navigate(['/cadastro'])
     })
 
   }

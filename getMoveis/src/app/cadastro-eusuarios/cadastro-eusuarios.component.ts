@@ -16,7 +16,7 @@ export class CadastroEUsuariosComponent implements OnInit {
   valSenha: boolean = false
   alerta: boolean = false
 
-  deletou:boolean = false
+  deletou: boolean = false
   delOk: boolean = false
 
 
@@ -44,7 +44,6 @@ export class CadastroEUsuariosComponent implements OnInit {
     if (item2 == "true") {
       this.deletou = true
       localStorage.clear()
-
       setTimeout(() => {
         location.assign('/cadastro')
       }, 5000)

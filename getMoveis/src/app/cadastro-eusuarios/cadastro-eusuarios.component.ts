@@ -17,7 +17,6 @@ export class CadastroEUsuariosComponent implements OnInit {
   alerta: boolean = false
 
   deletou: boolean = false
-  delOk: boolean = false
 
 
   constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
@@ -40,7 +39,8 @@ export class CadastroEUsuariosComponent implements OnInit {
 
     }
 
-    let item2: string = localStorage.getItem('delOk')
+    let item2: string = localStorage.getItem('delOK')
+
     if (item2 == "true") {
       this.deletou = true
       localStorage.clear()

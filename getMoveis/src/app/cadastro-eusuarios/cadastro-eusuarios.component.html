@@ -34,7 +34,7 @@
 
                 <div *ngIf='alerta'>
                     <div class="alert alert-danger" role="alert">
-                        As senhas não conferem. Por favor confirmar as senhas antes do cadastro.
+                        As senhas não conferem.
                     </div>
 
                 </div>
@@ -74,7 +74,7 @@
                                 Editar
                             </button>
 
-                            <button class="btn btn-outline-danger" [routerLink] = "['/deletar', user.id]" >Apagar</button>
+                            <button class="btn btn-outline-danger" [routerLink]="['/deletar', user.id]">Apagar</button>
 
                         </div>
 

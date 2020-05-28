@@ -32,8 +32,8 @@ export class DeletarComponent implements OnInit {
   btnSim() {
     this.usuarioService.deleteUsuario(this.user.id).subscribe(() => {
       this.delOK = true
-      localStorage.setItem("delOK", this.delOK.toString())
       this.router.navigate(['/cadastro'])
+      localStorage.setItem("delOK", this.delOK.toString())
     })
 
   }

@@ -14,7 +14,8 @@ import { CadastroEUsuariosComponent } from './cadastro-eusuarios/cadastro-eusuar
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { EditarComponent } from './editar/editar.component';
-import { DeletarComponent } from './deletar/deletar.component'
+import { DeletarComponent } from './deletar/deletar.component';
+import { SofasComponent } from './sofas/sofas.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DeletarComponent } from './deletar/deletar.component'
     SobrenosComponent,
     CadastroEUsuariosComponent,
     EditarComponent,
-    DeletarComponent
+    DeletarComponent,
+    SofasComponent
   ],
   imports: [
     BrowserModule,

@@ -41,6 +41,47 @@
     background-color:  #915b4a;
 }
 
+/* Estilo do Modal */
+
+.container{
+    background-color: #F2F2F2;
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+.modal-header{
+    border-bottom: 0px;
+
+}
+
+.modal-content input,
+.modal-content button {
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+}
+
+.modal-content input{
+    border-bottom-color: #ccc;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin-bottom: 10px;
+}
+
+.modal-content input:focus{
+    border-bottom-color: #D07335;
+}
+
+.BotaoEnviar{
+    background-color: #D07335;
+    color: #FFF;
+}
+
+/* Fim do Estilo do modal */
+
 /* Final Barra de categorias */
 
 /* #pesquisar{
@@ -92,3 +133,4 @@
         margin-left: 20px;
     }
 }  */
+

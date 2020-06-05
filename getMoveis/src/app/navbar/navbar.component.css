@@ -72,11 +72,11 @@
 }
 
 .modal-content input:focus{
-    border-bottom-color: #D07335;
+    border-bottom-color: #915b4a;
 }
 
 .BotaoEnviar{
-    background-color: #D07335;
+    background-color: #915b4a;
     color: #FFF;
 }
 

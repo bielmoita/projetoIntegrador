@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../service/usuario.service';
-import { User } from '../model/User';
+import { Usuario } from '../model/Usuario';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditarComponent implements OnInit {
 
-  user: User = new User
+  usuario: Usuario = new Usuario
 
   valSenha: boolean = false
 
@@ -20,8 +20,8 @@ export class EditarComponent implements OnInit {
 
   ngOnInit(): void {
 
-    let id = this.route.snapshot.params['id']
-    this.findById(id)
+    let codigoCpf = this.route.snapshot.params['codigoCpf']
+    this.findById(codigoCpf)
 
     window.scroll(0, 0)
 
@@ -40,17 +40,17 @@ export class EditarComponent implements OnInit {
 
   }
 
-  findById(id: number) {
-    this.usuarioService.getByIdUsuario(id).subscribe((resp: User) => {
-      this.user = resp
+  findById(codigoCpf: number) {
+    this.usuarioService.getByIdUsuario(codigoCpf).subscribe((resp: Usuario) => {
+      this.usuario = resp
     })
   }
 
   salvar() {
 
-    if (this.user.senha == this.user.senha2) {
-      this.usuarioService.putUsuario(this.user).subscribe((resp: User) => {
-        this.user = resp
+    if (this.usuario.senha == this.usuario.senha2) {
+      this.usuarioService.putUsuario(this.usuario).subscribe((resp: Usuario) => {
+        this.usuario = resp
         this.router.navigate(['/cadastro'])
         location.assign('/cadastro')
         this.valSenha = false

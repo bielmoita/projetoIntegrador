@@ -9,27 +9,33 @@
                 <h3 class="text-center text-monospace">Cadastre-se na GETMóveis!</h3>
 
                 <div class="form-group">
+                    <label for="nome" class="text-monospace">CPF</label>
+                    <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome completo"
+                        [(ngModel)]="usuario.codigoCpf" minlength="3" required size="80">
+                </div>
+
+                <div class="form-group">
                     <label for="nome" class="text-monospace">Nome</label>
                     <input type="text" name="nome" id="nome" class="form-control" placeholder="Digite seu nome completo"
-                        [(ngModel)]="user.nome" minlength="3" required size="80">
+                        [(ngModel)]="usuario.nomeCliente" minlength="3" required size="80">
                 </div>
 
                 <div class="form-group">
                     <label for="email" class="text-monospace">E-mail:</label>
                     <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu email"
-                        required pattern=".+@mail.com" size="80" required [(ngModel)]="user.email">
+                        required pattern=".+@mail.com" size="80" required [(ngModel)]="usuario.email">
                 </div>
 
                 <div class="form-group">
                     <label for="password" class="text-monospace">Senha:</label>
                     <input type="password" id="password" class="form-control" name="password" minlength="8"
-                        placeholder="Digite uma senha com no minimo 8 caracteres" required [(ngModel)]="user.senha">
+                        placeholder="Digite uma senha com no minimo 8 caracteres" required [(ngModel)]="usuario.senha">
                 </div>
 
                 <div class="form-group">
                     <label for="password2" class="text-monospace">Confirme a Senha:</label>
                     <input type="password" id="password2" class="form-control" name="password2" minlength="8"
-                        placeholder="Digite uma senha com no minimo 8 caracteres" required [(ngModel)]="user.senha2">
+                        placeholder="Digite uma senha com no minimo 8 caracteres" required [(ngModel)]="usuario.senha2">
                 </div>
 
                 <div *ngIf='alerta'>
@@ -59,22 +65,23 @@
 
 
 
-            <div class="card mb-4" *ngFor="let user of listaUsuarios">
+            <div class="card mb-4" *ngFor="let usuario of listaUsuarios">
 
                 <div class="card-header">
 
                     <div class="row">
                         <div class="col-md-8">
-                            <h5 class="card-title">{{user.nome}}</h5>
+                            <h5 class="card-title">{{usuario.nomeCliente}}</h5>
 
                         </div>
 
                         <div class="col-md-4 d-flex justify-content-end">
-                            <button class="btn btn-outline-info mr-3" [routerLink]="['/editar',user.id]">
+                            <button class="btn btn-outline-info mr-3" [routerLink]="['/usuarios',usuario.codigoCpf]">
                                 Editar
                             </button>
 
-                            <button class="btn btn-outline-danger" [routerLink]="['/deletar', user.id]">Apagar</button>
+                            <button class="btn btn-outline-danger"
+                                [routerLink]="['/deletar', usuario.codigoCpf]">Apagar</button>
 
                         </div>
 
@@ -90,9 +97,9 @@
                 </div>
 
                 <div class="card-body">
-                    <!-- <p class="card-text">EMAIL CLIENTE: {{user.email}}</p> -->
-                    <!-- <p class="card-text">SENHA CLIENTE: {{user.senha}}</p> -->
-                    <p class="card-text">ID CLIENTE: {{user.id}}</p>
+                    <p class="card-text">EMAIL CLIENTE: {{usuario.email}}</p>
+                    <p class="card-text">SENHA CLIENTE: {{usuario.senha}}</p>
+                    <p class="card-text">CPF CLIENTE: {{usuario.codigoCpf}}</p>
                 </div>
 
             </div>

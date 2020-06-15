@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../model/User';
+import { Usuario } from '../model/Usuario';
 import { UsuarioService } from '../service/usuario.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DeletarComponent implements OnInit {
 
-  user: User = new User
+  usuario: Usuario = new Usuario
   delOK: boolean = false
 
   constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
@@ -22,15 +22,15 @@ export class DeletarComponent implements OnInit {
   }
 
   findById(id: number) {
-    this.usuarioService.getByIdUsuario(id).subscribe((resp: User) => {
-      this.user = resp
+    this.usuarioService.getByIdUsuario(id).subscribe((resp: Usuario) => {
+      this.usuario = resp
     }, err => {
       console.log(`Erro: ${err.status}. Não conseguimos pegar o ID`)
     })
   }
 
   btnSim() {
-    this.usuarioService.deleteUsuario(this.user.id).subscribe(() => {
+    this.usuarioService.deleteUsuario(this.usuario.codigoCpf).subscribe(() => {
       this.delOK = true
       this.router.navigate(['/cadastro'])
       localStorage.setItem("delOK", this.delOK.toString())

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'; //Typescript cadastro
 import { UsuarioService } from '../service/usuario.service';
-import { User } from '../model/User';
+import { Usuario } from '../model/Usuario';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -10,8 +10,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CadastroEUsuariosComponent implements OnInit {
 
-  listaUsuarios: User[]
-  user: User = new User
+  listaUsuarios: Usuario[]
+  usuario: Usuario = new Usuario
 
   valSenha: boolean = false
   alerta: boolean = false
@@ -56,15 +56,15 @@ export class CadastroEUsuariosComponent implements OnInit {
   }
 
   findAllUsuarios() {
-    this.usuarioService.getAllUsuarios().subscribe((resp: User[]) => {
+    this.usuarioService.getAllUsuarios().subscribe((resp: Usuario[]) => {
       this.listaUsuarios = resp
     })
   }
 
   cadastrar() {
-    if (this.user.senha == this.user.senha2) {
-      this.usuarioService.postUsuario(this.user).subscribe((resp: User) => {
-        this.user = resp
+    if (this.usuario.senha == this.usuario.senha2) {
+      this.usuarioService.postUsuario(this.usuario).subscribe((resp: Usuario) => {
+        this.usuario = resp
         location.assign('/cadastro')
         this.valSenha = false
       })

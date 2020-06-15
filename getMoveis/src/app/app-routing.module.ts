@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'faq', component: FAQComponent },
   { path: 'sobrenos', component: SobrenosComponent },
   { path: 'cadastro', component: CadastroEUsuariosComponent },
-  { path: 'editar/:id', component: EditarComponent },
+  { path: 'usuarios/:codigoCpf', component: EditarComponent },
   { path: 'deletar/:id', component: DeletarComponent },
   { path: 'sofas', component: SofasComponent }
 ];

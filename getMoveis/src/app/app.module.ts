@@ -15,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
-import { SofasComponent } from './sofas/sofas.component'
+import { SofasComponent } from './sofas/sofas.component';
+import { ProdutosComponent } from './produtos/produtos.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SofasComponent } from './sofas/sofas.component'
     CadastroEUsuariosComponent,
     EditarComponent,
     DeletarComponent,
-    SofasComponent
+    SofasComponent,
+    ProdutosComponent
   ],
   imports: [
     BrowserModule,

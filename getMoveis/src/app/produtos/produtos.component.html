@@ -1,0 +1,53 @@
+<div class="container">
+    <!-- Estava na DIV: style="height: 20000px;" -->
+
+
+    <div class="row mt-3 mb-3  justify-content-center">
+        <div class="col-md-3">
+            <div class="order text-center mt-5">
+                <h3 class="mb-3">Ordenar Por</h3>
+                <div class="d-flex justify-content-center">
+                    <ul>
+                        <li>
+                            <a href="">Mais Relevantes</a>
+                        </li>
+                        <li>
+                            <a href="">Menor Preço</a>
+                        </li>
+                        <li>
+                            <a href="">Maior Preço</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-9 justify-content-center">
+            <div class="card col-md-3 ml-3 mt-5 mr-3 p-3 p-3" *ngFor="let produto of listaProdutos">
+                <img class="card-img-top" src="assets/img/produtos/sofas/sofa_adam.png" alt="Imagem do produto">
+                <div class="card-body text-center">
+
+
+                    <h5 class="card-title mb-3 mb-3">{{produto.nome}}</h5>
+
+                </div>
+                <p class="card-text">Código: {{produto.codigoDoProduto}} </p>
+                <p class="card-text">Preço: R {{produto.valor}}</p>
+                <p class="card-text">Quantidade em estoque: {{produto.qtdEstoque}}</p>
+                <div>
+                    <button class="btn btn-outline-info btn-lg btn-block mr-3 mt-3">
+                        COMPRAR
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>

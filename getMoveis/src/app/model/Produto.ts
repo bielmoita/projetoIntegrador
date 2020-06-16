@@ -1,4 +1,4 @@
-export class User {
+export class Produto {
     public codigoDoProduto: number
     public nome: string
     public modelo: string

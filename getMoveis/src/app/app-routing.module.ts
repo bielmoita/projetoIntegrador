@@ -8,6 +8,7 @@ import { CadastroEUsuariosComponent } from './cadastro-eusuarios/cadastro-eusuar
 import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
 import { SofasComponent } from './sofas/sofas.component';
+import { ProdutosComponent } from './produtos/produtos.component'
 
 const routes: Routes = [
 
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'cadastro', component: CadastroEUsuariosComponent },
   { path: 'usuarios/:codigoCpf', component: EditarComponent },
   { path: 'deletar/:id', component: DeletarComponent },
-  { path: 'sofas', component: SofasComponent }
+  { path: 'sofas', component: SofasComponent },
+  { path: 'produtos', component: ProdutosComponent }
 ];
 
 @NgModule({

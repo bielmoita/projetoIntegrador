@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+.order {
+    display: block;
+    line-height: 20px;
+}
+
+h3{
+    font-weight: bold;
+}
+ul{ 
+    text-align: start;
+}
+
+li{
+    list-style-type: none;
+}
+
+li, h3, a {
+    font-size: 1.2rem;
+    color: #915b4a;
+    transition: all 0.5s;
+}
+.container-fluid{
+    margin-bottom: 8rem;
+}
+.btn-outline-info, .card-title {
+    color: #915b4a;;
+    border-color: #915b4a;;
+}
+
+.btn-outline-info:hover {
+    color: #fff;
+    background-color: #915b4a;;
+    border-color: black;
+}
+.card-title {
+    color: #915b4a;
+    font-weight: bold;
+}

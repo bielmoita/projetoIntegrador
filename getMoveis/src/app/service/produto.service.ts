@@ -1,0 +1,21 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Produto } from '../model/Produto';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProdutoService {
+
+  constructor(private http: HttpClient) { }
+
+  // Implementação do CRUD
+
+  //Read
+  getAllProdutos() {
+    return this.http.get('http://localhost:8080/produtos')
+  }
+
+
+}
+

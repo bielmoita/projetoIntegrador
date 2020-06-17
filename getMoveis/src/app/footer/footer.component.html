@@ -1,62 +1,61 @@
 <footer class="container-fluid">
-
-    <div class="footerItens row">
-        <div class="getFooter col-md-4 text-center mt-2">
-            <h5 class="mt-3" id="linkSobrenos" routerLink='/sobrenos'>SOBRE A GETMÓVEIS</h5>
-            <br>
-            <p class="pb-4">Somos uma empresa cujo o proposito é trazer produtos de
-                qualidade por um preço acessível a nossos clientes.</p>
-        </div>
-
-        <div class="produtosFooter col-md-4 text-center mt-2">
-            <h5 class="mt-3">PRINCIPAIS PRODUTOS</h5>
-            <ul class="p-2 mb-1" style="list-style: none;">
-                <li><a class="liCorProdutos" routerLink='sofas'><strong>Sofás</strong></a></li>
-                <li><a class="liCorProdutos" href="#"><strong>Poltronas</strong></a></li>
-                <li><a class="liCorProdutos" href="#"><strong>Cadeiras</strong></a></li>
-                <li><a class="liCorProdutos" href="#"><strong>Mesas</strong></a></li>
-            </ul>
-        </div>
-
-        <div class="col-md-4 text-center p-0">
-            <div class="linkContato border-bottom">
-                <h5 routerLink='/contato'>CONTATO</h5>
+    
+    
+        
+       
+        <div class="row d-flex d-inline linhaHorizontal corFundo footeritens">
+            
+            <div class="col col-sm-3 col-lg-4 text-center linhaVertical">
+                <h5 id="linkSobrenos" routerLink='/sobrenos'>SOBRE A GETMÓVEIS</h5>
             </div>
-            <div class="linkFAQ">
-                <h5 id="linkFAQ" routerLink='/faq'>FAQ</h5>
+            
+            <div class="col-lg-4 text-center linhaVertical">
+                <h5 class="linkContato" routerLink='/contato'>CONTATO</h5>
+            </div>
+            
+            <div class="col-lg-4 text-center linhaVertical">
+                <h5 class="linkFAQ" routerLink='/faq'>FAQ</h5>
             </div>
         </div>
-    </div>
-
-    <div class="rodapeFooter row">
-
-        <div class="redessociaisFooter col-md-4 mt-2">
-            <ul style="list-style: none;">
-                <li id="facebookFooter"><a href="http://facebook.com">
+        
+        <div class="row rodapeFooter">
+            
+            <div class="col-sm-6 col-lg-4 d-flex justify-content-center">
+                
+                <div class="d-inline p-2" id="facebookFooter">
+                    <a href="http://facebook.com">
                         <fa-icon [icon]="faFacebook" class="faFacebook fa-2x p-2"></fa-icon>
-                    </a></li>
-                <li id="instagramFooter"><a href="http://instagram.com">
+                    </a>
+                </div>
+                <div class="d-inline p-2" id="instagramFooter">
+                    <a href="http://instagram.com">
                         <fa-icon [icon]="faInstagram" class="faInstagram fa-2x p-2"></fa-icon>
-                    </a></li>
-                <li id="twitterFooter"><a href="http://twitter.com">
+                    </a>
+                </div>
+                <div class="d-inline p-2" id="twitterFooter">
+                    <a href="http://twitter.com">
                         <fa-icon [icon]="faTwitter" class="faTwitter fa-2x p-2"></fa-icon>
-                    </a></li>
-                <li id="linkedinFooter"><a href="https://br.linkedin.com">
+                    </a>
+                </div>
+                <div class="d-inline p-2" id="linkedinFooter">
+                    <a href="https://br.linkedin.com">
                         <fa-icon [icon]="faLinkedin" class="faLinkedin fa-2x p-2"></fa-icon>
-                    </a></li>
-            </ul>
-        </div>
-
-        <div class="infoRodape col-md-4 text-center">
-            <p class="mt-4">GetMóveis - CNPJ:00.000.000/0000-00</p>
-        </div>
-
-        <div class="PagamentoFooter col-md-4 text-center p-2">
-            <h6>Formas de Pagamento:</h6>
-            <fa-icon [icon]="faCcVisa" class="faCcVisa p-2" alt="Cartão Visa"></fa-icon>
-            <fa-icon [icon]="faCcMastercard" class="faCcMastercard p-2" alt="Cartão Visa"></fa-icon>
-            <fa-icon [icon]="faMoneyBillWaveAlt" class="faMoneyBillWaveAlt p-2" alt="Dinheiro"></fa-icon>
-        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-sm-3 col-lg-4 mt-4 text-center">
+                <p>GetMóveis - CNPJ:00.000.000/0000-00</p>
+            </div>
+            
+            <div class="col-sm-3 col-lg-4 mt-2 text-center">
+                <h6>Formas de Pagamento:</h6>
+                <fa-icon [icon]="faCcVisa" class="faCcVisa p-2" alt="Cartão Visa"></fa-icon>
+                <fa-icon [icon]="faCcMastercard" class="faCcMastercard p-2" alt="Cartão Visa"></fa-icon>
+                <fa-icon [icon]="faMoneyBillWaveAlt" class="faMoneyBillWaveAlt p-2" alt="Dinheiro"></fa-icon>
+            </div>
     </div>
-
+    
+    
+    
 </footer>

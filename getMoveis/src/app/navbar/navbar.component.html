@@ -1,72 +1,68 @@
-<div class="topbar">
-    <p style="font-family: Margem; font-size: 15px; color: #fff; text-transform: uppercase; margin-bottom: 0;">
-        PRODUTOS <strong style="font-weight: bold; color:#ecc207;;"> EM PROMOÇÃO! </strong> <a href="#Colocar o site"
-            style="text-decoration: underline; font-weight: bold; color:  #fff;">(CONFIRA)</a>
-    </p>
-</div>
-<!-- BARRA DE LOGO + BUSCA + LOGIN -->
+<div class="container-fluid">
 
-<div class="navbar navbar-light bg-light">
-    <div class="row">
+    <div class="topbar mt-2">
+        <p style="font-family: Margem; font-size: 15px; color: #fff; text-transform: uppercase; margin-bottom: 0;">
+            PRODUTOS <strong style="font-weight: bold; color:#ecc207;;"> EM PROMOÇÃO! </strong> <a href="#Colocar o site"
+                style="text-decoration: underline; font-weight: bold; color:  #fff;">(CONFIRA)</a>
+        </p>
+    </div>
 
-        <div class="col-1 p-0 d-flex align-items-center">
-            <a routerLink='/home'><img a routerLink='/home' id="logoIcon" src="assets/img/nav/get_home.png"
-                    alt="Logo GET Móveis" class="rounded"></a>
-            <!-- <img a href="#HOME" id="logoIcon" src="../assets/img/getmoveislogo2.png" alt="Logo GET Móveis"> -->
+    <div class="row fundonav">
+        <div class="col-2 ml-3 mt-1">
+            <a routerLink='/home'><img a routerLink='/home' id="logoicon" src="assets/img/nav/get_home.png" 
+                alt="Logo GET Móveis"></a>
         </div>
-        <div class="col-8 pr-0 pl-4">
-            <input class="form-control mr-sm-2 buscar h-100" type="search" placeholder="O que você procura?"
-                aria-label="Search">
+        <div class="col-8 p-2">
+            <form class="form-inline">
+                <input class="form-input" id="pesquisar" type="search" placeholder="O que você procura?">
+                <button class="searchbtn" type="submit">
+                    <fa-icon [icon]="faSearch"></fa-icon></button>
+            </form>
         </div>
-        <div class="col-1 p-0 text-center" id="pesquisar">
-            <button class="btn-sm btn-light border-0 p-0" type="submit">
-                <fa-icon [icon]="faSearch" class="faSearch fa-2x p-0"></fa-icon>
-            </button>
+        <div class="col-1" data-toggle="modal" data-target="#login">
+                <button class="btn btn-default" type="submit" routerLink='cadastro'>
+                    <fa-icon [icon]="faUser" class="faUser fa-2x"></fa-icon>
+                </button>
         </div>
-        <div class="col-1 p-0 text-right" data-toggle="modal" data-target="#login">
-            <button class="btn-sm btn-light border-0 p-0" type="submit" routerLink='cadastro'>
-                <fa-icon [icon]="faUser" class="faUser fa-2x p-0"></fa-icon>
-            </button>
-        </div>
-        <div class="col-1 px-1 text-left" id="carrinho">
-            <button class="btn-sm btn-light border-0 p-0" type="submit">
-                <fa-icon [icon]="faShoppingCart" class="faShoppingCart fa-2x p-0"></fa-icon>
+        <div>
+            <button class="col-1 btn btn-default" type="submit">
+                <fa-icon [icon]="faShoppingCart" class="faShoppingCart fa-2x"></fa-icon>
             </button>
         </div>
 
     </div>
 
-    <!-- fIM DA BARRA DE LOGO + BUSCA + LOGIN -->
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
 
+        <a class="navbar-brand"></a>
 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-</div>
+        <div class="collapse navbar-collapse" id="navbarSite">
 
+            <ul class="navbar-nav mr-auto">
 
-<!-- ÍNICIO BARRA DE CATEGORIAS -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink='sofas'>SOFÁS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">POLTRONAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CADEIRAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">MESAS</a>
+                </li>
 
-<nav style="border-bottom: 0.1px solid #ced4da; border-top: 0.1px solid #ced4da;">
-    <!-- Linha cinza no nav 2 -->
-    <ul class="nav nav-pills nav-justified">
-        <li class="nav-item">
-            <a class="nav-link" routerLink='sofas'>SOFÁS</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">POLTRONAS</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">CADEIRAS</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">MESAS</a>
-        </li>
-    </ul>
-</nav>
+            </ul>
 
-<!-- FIM BARRA DE CATEGORIAS -->
+        </div>
+    </div>
 
-
-<!-- Modal Login -->
+    <!-- Modal Login -->
 <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
 
@@ -116,3 +112,6 @@
     </div>
 
     <!-- FIM MODAL LOGIN -->
+
+
+</div>

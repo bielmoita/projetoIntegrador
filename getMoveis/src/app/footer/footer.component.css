@@ -2,21 +2,22 @@
 
 /* CONFIGURAÇÃO CAIXA FOOTER DA SEÇÃO*/
 
-.footerItens{
-    
-    background-color: rgb(248, 249, 250);
-    border-top: #000000 2px solid;
-}
-
 /* FIM DA CONFIGURAÇÃO CAIXA FOOTER DAS SEÇÃO*/
 
 /* SEÇÃO  GET MÓVEIS | PRODUTOS | CONTATOS */
-.getFooter{
-    border-right: 0.1px solid #ced4da;    
+
+.linhaHorizontal{
+    border-top: 0.1px solid #ced4da;
+    background-color: rgb(248, 249, 250);
+}
+.linhaVertical{
+    border-right: 0.1px solid #ced4da;
+    background-color: rgb(248, 249, 250);
 }
 
-.produtosFooter{
-    border-right: 0.1px solid #ced4da;  
+.corFundo{
+    background-color: rgb(248, 249, 250);
+    border-top: #000000 2px solid;
 }
 
 .liCorProdutos{
@@ -34,24 +35,17 @@
 
 
 .linkFAQ{
-    display: flex;
-    height: 50%;
-    align-items: center;
-    justify-content: center;
     color: #000000;
     transition: all 0.5s;
     cursor: pointer;
 }
+
 .linkFAQ:hover{
     color: white;
     background-color:  #915b4a;
 }
 
 .linkContato{
-    display: flex;
-    height: 50%;
-    align-items: center;
-    justify-content: center;
     color: #000000;
     transition: all 0.5s;
     cursor: pointer;

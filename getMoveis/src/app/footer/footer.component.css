@@ -13,6 +13,13 @@
 .linhaVertical{
     border-right: 0.1px solid #ced4da;
     background-color: rgb(248, 249, 250);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.linhaVertical:hover{
+    color: white;
+    background-color:  #915b4a;
 }
 
 .corFundo{
@@ -22,37 +29,6 @@
 
 .liCorProdutos{
     color: #4f2c14;
-}
-
-#linkSobrenos{
-    cursor: pointer;
-    transition: all 0.5s;
-}
-#linkSobrenos:hover{
-    color: white;
-    background-color:  #915b4a;
-}
-
-
-.linkFAQ{
-    color: #000000;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-
-.linkFAQ:hover{
-    color: white;
-    background-color:  #915b4a;
-}
-
-.linkContato{
-    color: #000000;
-    transition: all 0.5s;
-    cursor: pointer;
-}
-.linkContato:hover{
-    color: white;
-    background-color:  #915b4a;
 }
 
 /* FIM DA SEÇÃO  GET MÓVEIS | PRODUTOS | CONTATOS */

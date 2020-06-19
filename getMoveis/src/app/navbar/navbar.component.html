@@ -1,13 +1,13 @@
 <div class="container-fluid">
 
-    <div class="topbar mt-2">
-        <p style="font-family: Margem; font-size: 15px; color: #fff; text-transform: uppercase; margin-bottom: 0;">
-            PRODUTOS <strong style="font-weight: bold; color:#ecc207;;"> EM PROMOÇÃO! </strong> <a href="#Colocar o site"
-                style="text-decoration: underline; font-weight: bold; color:  #fff;">(CONFIRA)</a>
-        </p>
-    </div>
-
+        <div class="topbar mt-2">
+                <p style="font-family: Margem; font-size: 15px; color: #fff; text-transform: uppercase; margin-bottom: 0;">
+                    PRODUTOS <strong style="font-weight: bold; color:#ecc207;;"> EM PROMOÇÃO! </strong> <a href="#Colocar o site"
+                        style="text-decoration: underline; font-weight: bold; color:  #fff;">(CONFIRA)</a>
+                </p>
+        </div>
     <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top py-2 box-shadow">
+
         <a routerLink='/home' class="navbar-brand">
           <img src="assets/img/nav/get_home.png" id="logoicon" alt="Logo Getmoveis">
         </a>
@@ -48,56 +48,6 @@
         </div>
       </nav>
 
-      
-    <!-- Antigo -->
-
-    <!-- <div class="row fundonav">
-        <div class="col-12 col-lg-2 ml-3 mt-1">
-            <a routerLink='/home'><img a routerLink='/home' id="logoicon" src="assets/img/nav/get_home.png" 
-                alt="Logo GET Móveis"></a>
-        </div>
-            
-        <div class="col-9 col-lg-8 p-2">
-                <form class="form-inline">
-                    <input class="form-input" id="pesquisar" type="search" placeholder="O que você procura?">
-                    <button class="searchbtn" type="submit">
-                        <fa-icon [icon]="faSearch"></fa-icon></button>
-                </form>
-        </div>
-            
-        <div class="col-1 col-lg-1" data-toggle="modal" data-target="#login">
-                    <button class="btn btn-default" type="submit" routerLink='cadastro'>
-                        <fa-icon [icon]="faUser" class="faUser fa-2x"></fa-icon>
-                    </button>
-        </div>
-            
-        <div>
-                <button class="col-1 col-lg-1 btn btn-default" type="submit">
-                    <fa-icon [icon]="faShoppingCart" class="faShoppingCart fa-2x"></fa-icon>
-                </button>
-        </div>
-        
-
-    </div>
-    
-
-            <ul class="row navbar-light nav fundonav h-100 text-center">
-                    <li class="col col-md-2 col-lg-3  nav-item">
-                        <a class="nav-link" routerLink='sofas'>SOFÁS</a>
-                    </li>
-                    <li class="col col-md-2 col-lg-3 nav-item">
-                        <a class="nav-link" href="#">POLTRONAS</a>
-                    </li>
-                    <li class="col col-md-2 col-lg-3 nav-item">
-                        <a class="nav-link" href="#">CADEIRAS</a>
-                    </li>
-                    <li class="col col-md-2 col-lg-3 nav-item">
-                        <a class="nav-link" href="#">MESAS</a>
-                    </li>
-            </ul> -->
-
-   
-
     <!-- Modal Login -->
 
 <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -134,23 +84,23 @@
                                 <input type="password" id="password" placeholder="Digite a senha" required>
                             </div>
 
-                            <div class="d-flex justify-content-around">
+                            <div class="row">
                                 <div>
-                                  <!-- Remember me -->
-                                  <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="materialLoginFormRemember">
+                                  <!-- Lembrar -->
+                                  <div class="col-6 ml-3 form-check">
+                                    <input type="checkbox" class="form-check-input" style="width: 30%;" id="materialLoginFormRemember">
                                     <label class="form-check-label" for="materialLoginFormRemember">Lembrar</label>
                                   </div>
                                 </div>
                                 <div>
-                                  <!-- Forgot password -->
-                                  <a href="">Esqueceu a senha?</a>
+                                  <!-- Trocar Senha -->
+                                  <a class="class-6 ml-4" href="">Esqueceu a senha?</a>
                                 </div>
                             </div>
 
                             <div>
                                 <button id="btn-submit" class="btn-outline-dark BotaoEnviar">Enviar</button>
-                                <h6 class="p-1">Não tem conta?<br><a href="cadastro">cadastre-se</a></h6>
+                                <h6 class="p-2">Não tem conta?<br><a href="cadastro">cadastre-se</a></h6>
 
                             </div>
 

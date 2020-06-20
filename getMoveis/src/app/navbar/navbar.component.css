@@ -54,3 +54,9 @@
     background-color: #915b4a;
     color: #FFF;
 }
+
+.BotaoEnviar:hover{
+    background-color: #963e04;
+}
+
+/* Fim do Modal */

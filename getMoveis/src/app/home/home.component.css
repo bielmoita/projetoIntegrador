@@ -1,3 +1,14 @@
 .FotosCategorias img{
     width: 100%;
 }
+
+@media (max-width: 1199.98px) {
+.telapequena{
+    margin-top: 60px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    margin-top: 50px;
+}
+
+}

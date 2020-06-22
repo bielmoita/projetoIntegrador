@@ -1,52 +1,54 @@
-<div class="container-fluid">
-    <!-- Estava na DIV: style="height: 20000px;" -->
+<body>
+    <div class="container my-5">
+        <h1 class="text-center">NOSSOS PRODUTOS:</h1>
+        <hr>
 
-
-    <div class="row mt-3 mb-3  justify-content-center">
-        <div class="col-md-3">
-            <div class="order text-center mt-5">
-                <h3 class="mb-3">Ordenar Por</h3>
-                <div class="d-flex justify-content-center">
-                    <ul>
-                        <li>
-                            <a href="">Mais Relevantes</a>
-                        </li>
-                        <li>
-                            <a href="">Menor Preço</a>
-                        </li>
-                        <li>
-                            <a href="">Maior Preço</a>
-                        </li>
-                    </ul>
+        <div class="row">
+            <!-- Produto  -->
+            <div class=" col-md-3">
+                <div class="ordernar">
+                    <h3 class="mt-2 text-center">Categorias:</h3>
+                    <h5 class="text-center mt-3">Produtos:</h5>
+                    <div class="d-flex justify-content-center align-items">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="">Cadeiras</a>
+                            </li>
+                            <li>
+                                <a href="">Mesas</a>
+                            </li>
+                            <li>
+                                <a href="">Poltronas</a>
+                            </li>
+                            <li>
+                                <a href="">Sofás</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <div class="col-md-9 d-flex flex-wrap">
+                <div class="card col-10 col-md-3 mr-3 ml-3 mt-5 p-3" *ngFor="let produto of listaProdutos">
+                    <a href="#">
+                        <img src="assets/img/produtos/sofas/sofa_adam.png" class="w-100">
+                        <div class="overlay">
+                            <div class="detalhes">Ver Detalhes</div>
+                        </div>
+                    </a>
+                    <h5 class="text-center">{{produto.nome}}</h5>
+                    <h5 class="text-center">Preço: R {{produto.valor}}</h5>
+                    <h5 class="text-center">Quantidade em estoque: {{produto.qtdEstoque}}</h5>
+                    <a href="#" class="btn comprar">COMPRAR</a>
 
-        <div class="col-md-9 d-flex flex-wrap">
-            <div class="card col-10 col-md-3 mr-3 ml-3 mt-5 p-3" *ngFor="let produto of listaProdutos">
-                <img class="card-img-top" src="assets/img/produtos/sofas/sofa_adam.png" alt="Imagem do produto">
-                <div class="card-body text-center">
-
-                    <h5 class="card-title mb-3 mb-3">{{produto.nome}}</h5>
-
-                </div>
-                <p class="card-text">Código: {{produto.codigoDoProduto}} </p>
-                <p class="card-text">Preço: R {{produto.valor}}</p>
-                <p class="card-text">Quantidade em estoque: {{produto.qtdEstoque}}</p>
-                <div>
-                    <button class="btn btn-outline-info btn-lg btn-block mr-3 mt-3">
-                        COMPRAR
-                    </button>
                 </div>
             </div>
+
+
         </div>
-
-
-
-
 
 
 
 
     </div>
+</body>

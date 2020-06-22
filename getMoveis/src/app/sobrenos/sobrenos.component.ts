@@ -13,4 +13,7 @@ export class SobrenosComponent implements OnInit {
     window.scroll(0, 0)
   }
 
+  sobrenosM:string ="assets/img/Sobrenos/MVV/missao.png"
+  sobrenosV:string ="assets/img/Sobrenos/MVV/visao.png"
+  sobrenosVl:string ="assets/img/Sobrenos/MVV/valores.png"
 }

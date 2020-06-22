@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'; //Typescript cadastro
 import { UsuarioService } from '../service/usuario.service';
-import { User } from '../model/User';
+import { Usuario } from '../model/Usuario';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -10,16 +10,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CadastroEUsuariosComponent implements OnInit {
 
-  listaUsuarios: User[]
-  user: User = new User
+  seta: string = "assets/img/Cadastro/Seta.png"
+
+  listaUsuarios: Usuario[]
+  usuario: Usuario = new Usuario
 
   valSenha: boolean = false
-
   alerta: boolean = false
+
+  deletou: boolean = false
+
 
   constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
 
     this.findAllUsuarios()
     window.scroll(0, 0)
@@ -37,20 +41,32 @@ export class CadastroEUsuariosComponent implements OnInit {
 
     }
 
+    let item2: string = localStorage.getItem('delOK')
+
+    if (item2 == "true") {
+      this.deletou = true
+      localStorage.clear()
+      setTimeout(() => {
+        location.assign('/cadastro')
+      }, 5000)
+
+
+    }
+
 
 
   }
 
   findAllUsuarios() {
-    this.usuarioService.getAllUsuarios().subscribe((resp: User[]) => {
+    this.usuarioService.getAllUsuarios().subscribe((resp: Usuario[]) => {
       this.listaUsuarios = resp
     })
   }
 
   cadastrar() {
-    if (this.user.senha == this.user.senha2) {
-      this.usuarioService.postUsuario(this.user).subscribe((resp: User) => {
-        this.user = resp
+    if (this.usuario.senha == this.usuario.senha2) {
+      this.usuarioService.postUsuario(this.usuario).subscribe((resp: Usuario) => {
+        this.usuario = resp
         location.assign('/cadastro')
         this.valSenha = false
       })
@@ -75,12 +91,5 @@ export class CadastroEUsuariosComponent implements OnInit {
 
 
 }
-
-  // cadastrar() {
-  //   this.usuarioService.postUsuario(this.user).subscribe((resp: User) => {
-  //     this.user = resp
-  //     location.assign('/cadastro')
-  //   })
-  // }
 
 

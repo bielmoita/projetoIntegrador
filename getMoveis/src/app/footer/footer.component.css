@@ -2,37 +2,33 @@
 
 /* CONFIGURAÇÃO CAIXA FOOTER DA SEÇÃO*/
 
-.footerItens{
-    
+/* FIM DA CONFIGURAÇÃO CAIXA FOOTER DAS SEÇÃO*/
+
+/* SEÇÃO  GET MÓVEIS | PRODUTOS | CONTATOS */
+
+.linhaHorizontal{
+    border-top: 0.1px solid #ced4da;
+    background-color: rgb(248, 249, 250);
+}
+.linhaVertical{
+    border-right: 0.1px solid #ced4da;
+    background-color: rgb(248, 249, 250);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.linhaVertical:hover{
+    color: white;
+    background-color:  #915b4a;
+}
+
+.corFundo{
     background-color: rgb(248, 249, 250);
     border-top: #000000 2px solid;
 }
 
-/* FIM DA CONFIGURAÇÃO CAIXA FOOTER DAS SEÇÃO*/
-
-/* SEÇÃO  GET MÓVEIS | PRODUTOS | CONTATOS */
-.getFooter{
-    border-right: 0.1px solid #ced4da;    
-}
-
-.produtosFooter{
-    border-right: 0.1px solid #ced4da;  
-}
-
 .liCorProdutos{
     color: #4f2c14;
-}
-
-#linkSobrenos{
-    cursor: pointer;
-}
-
-#linkContato{
-    cursor: pointer;
-}
-
-#linkFAQ{
-    cursor: pointer;
 }
 
 /* FIM DA SEÇÃO  GET MÓVEIS | PRODUTOS | CONTATOS */

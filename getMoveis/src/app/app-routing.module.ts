@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ContatoComponent } from './contato/contato.component';
@@ -6,6 +6,10 @@ import { FAQComponent } from './faq/faq.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { CadastroEUsuariosComponent } from './cadastro-eusuarios/cadastro-eusuarios.component';
 import { EditarComponent } from './editar/editar.component';
+import { DeletarComponent } from './deletar/deletar.component';
+import { SofasComponent } from './sofas/sofas.component';
+import { ProdutosComponent } from './produtos/produtos.component'
+import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component';
 
 
 const routes: Routes = [
@@ -16,7 +20,12 @@ const routes: Routes = [
   { path: 'faq', component: FAQComponent },
   { path: 'sobrenos', component: SobrenosComponent },
   { path: 'cadastro', component: CadastroEUsuariosComponent },
-  { path: 'editar/:id', component: EditarComponent }
+  { path: 'usuarios/:codigoCpf', component: EditarComponent },
+  { path: 'deletar/:id', component: DeletarComponent },
+  { path: 'sofas', component: SofasComponent },
+  { path: 'produtos', component: ProdutosComponent },
+  { path: 'cadastro', component: CadastroEUsuariosComponent },
+  { path: 'editar/:id', component: UsuarioEditarComponent }
 ];
 
 @NgModule({

@@ -1,70 +1,62 @@
-* {
-    justify-content: center;
-}
 
-/* Barra com as promoções do Header */
 .topbar {
-    padding-top: 10px;
-    justify-content: center;
     background-image: linear-gradient(to left, #2f2f2f, #000000);
     text-align: center;
 }
 
-/* Final da Barra com as promoções do Header */
+#logoicon {
+    max-width: 12rem;
 
-#logoIcon {
-    width: 70%;
-}
-
-.form-control{
-    width: 100%;
-}
-/* #pesquisar{
-    width: 30%;
-}
-#login{
-    width: 30%;
-}
-#carrinho{
-    width: 30%;
-} */
-
-/* .navbar{
-    justify-content: center;
-}
-.nav-link{
-    color: black;
-    font-weight: bold;
-    transition: all 0.5s;
-}
-.nav-link:hover{
-    color: white;
-    background-color:  #915b4a;
-}
-.faq-accordion{
-    text-decoration: none;
-    color: #915b4a;
-    font-size: 14px;
-}
-.btn-link:hover {
-    color: black;
-    text-decoration: none;
 }
 
-#textoDuvida {
-    text-decoration: none;
-    text-align: center;
-    font-size: large;
+.cortexto{
+    font-family: Hind Madurai,Arial,sans-serif;
+}
+
+
+
+
+ /* Estilo do Modal */
     
+ .container{
+    background-color: #F2F2F2;
+    width: 300px;
+    height: 400px;
+    border-radius: 15px;
+    padding: 5px;
 }
-.container
-{
-    padding-top: 25px;
-} */
 
- /* @media (min-width: 576px){
-    .form-inline .form-control {
-        width: 850px;
-        margin-left: 20px;
-    }
-}  */
+.modal-header{
+    border-bottom: 0px;
+
+}
+
+.modal-content input,
+.modal-content button {
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+    outline: none;
+}
+
+.modal-content input{
+    border-bottom-color: #ccc;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    margin-bottom: 10px;
+}
+
+.modal-content input:focus{
+    border-bottom-color: #915b4a;
+}
+
+.BotaoEnviar{
+    background-color: #915b4a;
+    color: #FFF;
+}
+
+.BotaoEnviar:hover{
+    background-color: #963e04;
+}
+
+/* Fim do Modal */

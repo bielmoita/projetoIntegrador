@@ -14,10 +14,17 @@ import { CadastroEUsuariosComponent } from './cadastro-eusuarios/cadastro-eusuar
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { DeletarComponent } from './deletar/deletar.component'
 =======
 import { EditarComponent } from './editar/editar.component'
 >>>>>>> 7f0415af81034f3e020735b3111dde5c134e20f4
+=======
+import { EditarComponent } from './editar/editar.component';
+import { DeletarComponent } from './deletar/deletar.component';
+import { SofasComponent } from './sofas/sofas.component';
+import { ProdutosComponent } from './produtos/produtos.component'
+>>>>>>> cf9e0d7d404b28edb840494fe257516ac1871e6f
 
 @NgModule({
   declarations: [
@@ -30,10 +37,17 @@ import { EditarComponent } from './editar/editar.component'
     SobrenosComponent,
     CadastroEUsuariosComponent,
 <<<<<<< HEAD
+<<<<<<< HEAD
     DeletarComponent
 =======
     EditarComponent
 >>>>>>> 7f0415af81034f3e020735b3111dde5c134e20f4
+=======
+    EditarComponent,
+    DeletarComponent,
+    SofasComponent,
+    ProdutosComponent
+>>>>>>> cf9e0d7d404b28edb840494fe257516ac1871e6f
   ],
   imports: [
     BrowserModule,

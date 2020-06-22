@@ -11,14 +11,22 @@ export class ProdutosComponent implements OnInit {
 
   listaProdutos: Produto[]
 
+  nome: string = localStorage.getItem('nome')
+
   constructor(private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
-    this.findallProdutos()
+    this.pesquisarPorNome()
   }
 
   findallProdutos() {
     this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+      this.listaProdutos = resp
+    })
+  }
+
+  pesquisarPorNome() {
+    this.produtoService.GetByNome(this.nome).subscribe((resp: Produto[]) => {
       this.listaProdutos = resp
     })
   }

@@ -10,11 +10,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CadastroEUsuariosComponent implements OnInit {
 
-
-  seta: string = "assets/img/Cadastro/Seta.png"
-
-  listaUsuarios: User[]
-  user: User = new User
+  listaUsuarios: Usuario[]
+  usuario: Usuario = new Usuario
 
   valSenha: boolean = false
   alerta: boolean = false

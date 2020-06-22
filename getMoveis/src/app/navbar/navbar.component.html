@@ -1,4 +1,4 @@
-<div class="container-fluid p-0">
+<div class="container-fluid">
 
     <div class="topbar mt-2">
         <p style="font-family: Margem; font-size: 15px; color: #fff; text-transform: uppercase; margin-bottom: 0;">
@@ -8,202 +8,114 @@
         </p>
     </div>
 
-    <div class="row fundonav">
-        <div class="col-2 ml-3 mt-1">
-            <a routerLink='/home'><img a routerLink='/home' id="logoicon" src="assets/img/nav/get_home.png"
-                    alt="Logo GET Móveis"></a>
-        </div>
-        <div class="col-8 p-2">
-            <form class="form-inline">
-                <input class="form-input" id="pesquisar" type="search" placeholder="O que você procura?">
-                <button class="searchbtn" type="submit">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top py-2 box-shadow">
+
+        <a routerLink='/home' class="navbar-brand">
+            <img src="assets/img/nav/get_home.png" id="logoicon" alt="Logo Getmoveis">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir Navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="input-group md-form form-sm form-2 pl-0">
+            <input class="form-control my-0 py-1 red-border" type="text" placeholder="O que Procura?"
+                aria-label="Pesquisar">
+            <div class="input-group-append">
+                <span class="input-group-text red lighten-3 btn btn-outline-primary" id="Pesquisar" routerLink='sofas'>
                     <fa-icon [icon]="faSearch"></fa-icon>
-                </button>
-            </form>
-        </div>
-        <div class="col-1" data-toggle="modal" data-target="#login">
-            <button class="btn btn-default" type="submit" routerLink='cadastro'>
-                <fa-icon [icon]="faUser" class="faUser fa-2x"></fa-icon>
-            </button>
-        </div>
-        <div>
-            <button class="col-1 btn btn-default" type="submit">
-                <fa-icon [icon]="faShoppingCart" class="faShoppingCart fa-2x"></fa-icon>
-            </button>
+                </span>
+            </div>
         </div>
 
-        <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top py-2 box-shadow">
 
-            <a routerLink='/home' class="navbar-brand">
-                <img src="assets/img/nav/get_home.png" id="logoicon" alt="Logo Getmoveis">
-            </a>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produtos</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item cortexto" routerLink='#'>Cadeiras</a>
+                        <a class="dropdown-item cortexto" routerLink='#'>Mesas</a>
+                        <a class="dropdown-item cortexto" routerLink='#'>Poltronas</a>
+                        <a class="dropdown-item cortexto" routerLink='sofas'>Sofás</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mt-2 cortexto" href="" data-toggle="modal" data-target="#login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-outline-dark ml-md-2 mt-2 cortexto" routerLink='cadastro'>Cadastro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item btn ml-md-2 mt-2 cortexto" routerLink='cadastro'>
+                        <fa-icon [icon]="faShoppingCart" class="faShoppingCart fa-1x"></fa-icon>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir Navegação">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Modal Login -->
 
-            <div class="input-group md-form form-sm form-2 pl-0">
-                <input class="form-control my-0 py-1 red-border" type="text" placeholder="O que Procura?"
-                    aria-label="Pesquisar">
-                <div class="input-group-append">
-                    <span class="input-group-text red lighten-3 btn btn-outline-primary" id="Pesquisar"
-                        routerLink='sofas'>
-                        <fa-icon [icon]="faSearch"></fa-icon>
-                    </span>
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content container">
+                <div class="row modal-header">
+                    <h5 class="col-6 mt-3"><strong>Login</strong></h5>
                 </div>
-            </div>
 
-
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produtos</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item cortexto" routerLink='#'>Cadeiras</a>
-                            <a class="dropdown-item cortexto" routerLink='#'>Mesas</a>
-                            <a class="dropdown-item cortexto" routerLink='#'>Poltronas</a>
-                            <a class="dropdown-item cortexto" routerLink='sofas'>Sofás</a>
+                <div class="modal-body pt-0">
+                    <div>
+                        <div class="mx-4 mb-3">
+                            <a routerLink='home' target="_blank">
+                                <img src="assets/img/nav/get_home.png" style="width: 12rem;" alt="Logo da Hcode">
+                            </a>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mt-2 cortexto" href="" data-toggle="modal" data-target="#login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-dark ml-md-2 mt-2 cortexto" routerLink='cadastro'>Cadastro</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-item btn ml-md-2 mt-2 cortexto" routerLink='cadastro'>
-                            <fa-icon [icon]="faShoppingCart" class="faShoppingCart fa-1x"></fa-icon>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- Modal Login -->
-        <<<<<<< HEAD <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-
-                <div class="modal-content container">
-                    <div class="row modal-header">
-                        <h5 class="col-6 mt-3"><strong>Login</strong></h5>
-                        <button type="button" class="close d-flex align-items-end col-6 mt-2" data-dismiss="modal"
-                            aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
                     </div>
 
-                    <div class="modal-body pt-0">
-                        <div class="row">
-                            <div class="col d-flex align-items-center">
-                                <a href="https://www.hcode.com.br" target="_blank">
-                                    <img class="mb-2" src="assets/img/nav/get_home.png" style="width: 12rem;"
-                                        alt="Logo da Hcode">
-                                </a>
-                            </div>
-                            =======
+                    <div class="row">
+                        <div class="col">
+                            <form action="/login" method="POST" id="form-login">
 
-                            <div class="modal fade" id="login" tabindex="-1" role="dialog"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-
-                                    <div class="modal-content container">
-                                        <div class="row modal-header">
-                                            <h5 class="col-6 mt-3"><strong>Login</strong></h5>
-                                        </div>
-
-                                        <div class="modal-body pt-0">
-                                            <div>
-                                                <div class="mx-4 mb-3">
-                                                    <a routerLink='home' target="_blank">
-                                                        <img src="assets/img/nav/get_home.png" style="width: 12rem;"
-                                                            alt="Logo da Hcode">
-                                                    </a>
-                                                    >>>>>>> e7f756c9f44f27d3b5b399d02c3e8420d7983812
-                                                </div>
-
-                                                <<<<<<< HEAD <div class="row">
-                                                    <div class="col d-flex align-items-center">
-                                                        <form action="/login" method="POST" id="form-login">
-                                                            =======
-                                                            <div class="row">
-                                                                <div class="col">
-                                                                    <form action="/login" method="POST" id="form-login">
-                                                                        >>>>>>> e7f756c9f44f27d3b5b399d02c3e8420d7983812
-
-                                                                        <div>
-                                                                            <input type="email" id="email"
-                                                                                placeholder="Digite o seu e-mail"
-                                                                                required>
-                                                                        </div>
-
-                                                                        <div>
-                                                                            <input type="password" id="password"
-                                                                                placeholder="Digite a senha" required>
-                                                                        </div>
-
-                                                                        <<<<<<< HEAD <div>
-                                                                            <button id="btn-submit"
-                                                                                class="btn-outline-dark BotaoEnviar">Enviar</button>
-                                                                            <h6 class="p-1">Não tem conta?<br><a
-                                                                                    href="cadastro">cadastre-se</a></h6>
-                                                                            =======
-                                                                            <div class="row">
-                                                                                <div>
-                                                                                    <!-- Lembrar -->
-                                                                                    <div class="col-6 ml-3 form-check">
-                                                                                        <input type="checkbox"
-                                                                                            class="form-check-input"
-                                                                                            style="width: 30%;"
-                                                                                            id="materialLoginFormRemember">
-                                                                                        <label class="form-check-label"
-                                                                                            for="materialLoginFormRemember">Lembrar</label>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div>
-                                                                                    <!-- Trocar Senha -->
-                                                                                    <a class="class-6 ml-4"
-                                                                                        href="">Esqueceu a senha?</a>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div>
-                                                                                <button id="btn-submit"
-                                                                                    class="btn BotaoEnviar">Enviar</button>
-                                                                                <h6 class="p-2">Não tem conta?<br><a
-                                                                                        href="cadastro">cadastre-se</a>
-                                                                                </h6>
-                                                                                >>>>>>>
-                                                                                e7f756c9f44f27d3b5b399d02c3e8420d7983812
-
-                                                                            </div>
-
-                                                                    </form>
-                                                                </div>
-                                                            </div>
-                                                    </div>
-
-                                            </div>
-                                        </div>
-                                        <<<<<<< HEAD <!-- FIM MODAL LOGIN -->
-
-
-                                    </div>
-                                    =======
+                                <div>
+                                    <input type="email" id="email" placeholder="Digite o seu e-mail" required>
                                 </div>
-                                <!-- FIM MODAL LOGIN -->
 
+                                <div>
+                                    <input type="password" id="password" placeholder="Digite a senha" required>
+                                </div>
 
+                                <div class="row">
+                                    <div>
+                                        <!-- Lembrar -->
+                                        <div class="col-6 ml-3 form-check">
+                                            <input type="checkbox" class="form-check-input" style="width: 30%;"
+                                                id="materialLoginFormRemember">
+                                            <label class="form-check-label"
+                                                for="materialLoginFormRemember">Lembrar</label>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- Trocar Senha -->
+                                        <a class="class-6 ml-4" href="">Esqueceu a senha?</a>
+                                    </div>
+                                </div>
 
+                                <div>
+                                    <button id="btn-submit" class="btn BotaoEnviar">Enviar</button>
+                                    <h6 class="p-2">Não tem conta?<br><a href="cadastro">cadastre-se</a></h6>
 
+                                </div>
 
+                            </form>
+                        </div>
+                    </div>
+                </div>
 
-
-
-
-
-
-                                >>>>>>> e7f756c9f44f27d3b5b399d02c3e8420d7983812
+            </div>
+        </div>
+        <!-- FIM MODAL LOGIN -->

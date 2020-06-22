@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-<<<<<<< HEAD
 import { Usuario } from '../model/Usuario';
-=======
-import { User } from '../model/User';
->>>>>>> lucivaldo
 
 @Injectable({
   providedIn: 'root'
@@ -39,12 +35,12 @@ export class UsuarioService {
 
   //Update(put)
 
-  putAllUsuarios(user: User){
+  putAllUsuarios(user: User) {
     return this.http.put('http://93.188.161.223:9000/user', user)
 
   }
 
-  getByIdUsuarios(id:number){
+  getByIdUsuarios(id: number) {
     return this.http.get(`http://93.188.161.223:9000/user/${id}`)
   }
 

@@ -5,15 +5,12 @@ import { ContatoComponent } from './contato/contato.component';
 import { FAQComponent } from './faq/faq.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { CadastroEUsuariosComponent } from './cadastro-eusuarios/cadastro-eusuarios.component';
-<<<<<<< HEAD
 import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
 import { SofasComponent } from './sofas/sofas.component';
 import { ProdutosComponent } from './produtos/produtos.component'
-=======
 import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component';
 
->>>>>>> lucivaldo
 
 const routes: Routes = [
 
@@ -22,16 +19,13 @@ const routes: Routes = [
   { path: 'contato', component: ContatoComponent },
   { path: 'faq', component: FAQComponent },
   { path: 'sobrenos', component: SobrenosComponent },
-<<<<<<< HEAD
   { path: 'cadastro', component: CadastroEUsuariosComponent },
   { path: 'usuarios/:codigoCpf', component: EditarComponent },
   { path: 'deletar/:id', component: DeletarComponent },
   { path: 'sofas', component: SofasComponent },
   { path: 'produtos', component: ProdutosComponent }
-=======
-  { path: 'cadastro', component: CadastroEUsuariosComponent},
+  { path: 'cadastro', component: CadastroEUsuariosComponent },
   { path: 'editar/:id', component: UsuarioEditarComponent }
->>>>>>> lucivaldo
 ];
 
 @NgModule({

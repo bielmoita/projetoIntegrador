@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'usuarios/:codigoCpf', component: EditarComponent },
   { path: 'deletar/:id', component: DeletarComponent },
   { path: 'sofas', component: SofasComponent },
-  { path: 'produtos', component: ProdutosComponent }
+  { path: 'produtos', component: ProdutosComponent },
   { path: 'cadastro', component: CadastroEUsuariosComponent },
   { path: 'editar/:id', component: UsuarioEditarComponent }
 ];

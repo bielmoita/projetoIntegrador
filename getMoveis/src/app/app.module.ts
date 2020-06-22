@@ -11,17 +11,12 @@ import { FAQComponent } from './faq/faq.component';
 import { ContatoComponent } from './contato/contato.component';
 import { SobrenosComponent } from './sobrenos/sobrenos.component';
 import { CadastroEUsuariosComponent } from './cadastro-eusuarios/cadastro-eusuarios.component';
-<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
 import { SofasComponent } from './sofas/sofas.component';
 import { ProdutosComponent } from './produtos/produtos.component'
-=======
-import { HttpClientModule } from '@angular/common/http';
-import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component'
->>>>>>> lucivaldo
 
 @NgModule({
   declarations: [
@@ -33,14 +28,10 @@ import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.componen
     ContatoComponent,
     SobrenosComponent,
     CadastroEUsuariosComponent,
-<<<<<<< HEAD
     EditarComponent,
     DeletarComponent,
     SofasComponent,
     ProdutosComponent
-=======
-    UsuarioEditarComponent
->>>>>>> lucivaldo
   ],
   imports: [
     BrowserModule,

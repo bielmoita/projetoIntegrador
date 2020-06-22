@@ -35,8 +35,8 @@ export class UsuarioService {
 
   //Update(put)
 
-  putAllUsuarios(user: User) {
-    return this.http.put('http://93.188.161.223:9000/user', user)
+  putAllUsuarios(usuario: Usuario) {
+    return this.http.put('http://93.188.161.223:9000/user', usuario)
 
   }
 

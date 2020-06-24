@@ -10,6 +10,7 @@ import { DeletarComponent } from './deletar/deletar.component';
 import { SofasComponent } from './sofas/sofas.component';
 import { ProdutosComponent } from './produtos/produtos.component'
 import { UsuarioEditarComponent } from './usuario-editar/usuario-editar.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'sofas', component: SofasComponent },
   { path: 'produtos', component: ProdutosComponent },
   { path: 'cadastro', component: CadastroEUsuariosComponent },
-  { path: 'editar/:id', component: UsuarioEditarComponent }
+  { path: 'editar/:id', component: UsuarioEditarComponent },
+  { path: 'carrinho', component: CarrinhoComponent }
 ];
 
 @NgModule({

@@ -7,4 +7,5 @@ export class Produto {
     public qtdEstoque: number
     public categoria: string
     public imagem: string
+    public descricaoProduto: string
 }

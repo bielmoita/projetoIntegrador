@@ -12,8 +12,6 @@ export class EditarComponent implements OnInit {
 
   usuario: Usuario = new Usuario
 
-  valSenha: boolean = false
-
   alerta: boolean = false
 
   constructor(private usuarioService: UsuarioService, private route: ActivatedRoute, private router: Router) { }
@@ -25,18 +23,9 @@ export class EditarComponent implements OnInit {
 
     window.scroll(0, 0)
 
-    let item: string = localStorage.getItem('valSenha')
-
-    if (item == "true") {
-      this.alerta = true
-      localStorage.clear()
-
-      setTimeout(() => {
-        location.assign('/cadastro')
-      }, 5000)
 
 
-    }
+
 
   }
 
@@ -48,23 +37,14 @@ export class EditarComponent implements OnInit {
 
   salvar() {
 
-    if (this.usuario.senha == this.usuario.senha2) {
-      this.usuarioService.putUsuario(this.usuario).subscribe((resp: Usuario) => {
-        this.usuario = resp
-        this.router.navigate(['/cadastro'])
-        location.assign('/cadastro')
-        this.valSenha = false
-      })
 
-    }
-    else {
-      this.valSenha = true
-      // this.router.navigate(['/cadastro'])
-      localStorage.setItem("valSenha", this.valSenha.toString())
+    this.usuarioService.putUsuario(this.usuario).subscribe((resp: Usuario) => {
+      this.usuario = resp
+      this.router.navigate(['/cadastro'])
       location.assign('/cadastro')
-      err => {
-        console.log(`Erro: ${err.status}, Não conseguimos validar a senha`);
-      }
-    }
+    })
+
   }
+
 }
+

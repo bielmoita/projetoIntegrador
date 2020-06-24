@@ -16,7 +16,10 @@ export class ProdutosComponent implements OnInit {
   constructor(private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
+
+    location.assign;
     this.pesquisarPorNome()
+    localStorage.setItem('nome', "a");
   }
 
   findallProdutos() {
@@ -31,4 +34,23 @@ export class ProdutosComponent implements OnInit {
     })
   }
 
+  buscaCadeiras() {
+    localStorage.setItem('nome', "cadeira");
+    location.assign('/produtos');
+  }
+
+  buscaMesas() {
+    localStorage.setItem('nome', "mesa");
+    location.assign('/produtos');
+  }
+
+  buscaPoltronas() {
+    localStorage.setItem('nome', "poltrona");
+    location.assign('/produtos');
+  }
+
+  buscaSofas() {
+    localStorage.setItem('nome', "sofa");
+    location.assign('/produtos');
+  }
 }

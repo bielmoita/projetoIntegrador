@@ -37,20 +37,39 @@
                     <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produtos</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item cortexto" routerLink='#'>Cadeiras</a>
-                        <a class="dropdown-item cortexto" routerLink='#'>Mesas</a>
-                        <a class="dropdown-item cortexto" routerLink='#'>Poltronas</a>
-                        <a class="dropdown-item cortexto" routerLink='sofas'>Sofás</a>
+                        <a class="dropdown-item cortexto" (click)='buscaCadeiras()'>Cadeiras</a>
+                        <a class="dropdown-item cortexto" (click)='buscaMesas()'>Mesas</a>
+                        <a class="dropdown-item cortexto" (click)='buscaPoltronas()'>Poltronas</a>
+                        <a class="dropdown-item cortexto" (click)='buscaSofas()'>Sofás</a>
+                        <a class="dropdown-item cortexto" (click)='buscaTodos()'>Todos</a>
                     </div>
                 </li>
+                <div *ngIf='authService.btnLogin()'>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item cortexto" href="" data-toggle="modal"
+                                data-target="#login">Entrar</a>
+                        </div>
+                    </li>
+                </div>
+                <div *ngIf='authService.btnSair()'>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bem vindx {{usuario}}!</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item cortexto" (click)='sair()'>Sair</a>
+                        </div>
+                    </li>
+                </div>
+                <div *ngIf='authService.btnLogin()'>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-dark ml-md-2 mt-2 cortexto" routerLink='cadastro'>Cadastro</a>
+                    </li>
+                </div>
                 <li class="nav-item">
-                    <a class="nav-link mt-2 cortexto" href="" data-toggle="modal" data-target="#login">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="btn btn-outline-dark ml-md-2 mt-2 cortexto" routerLink='cadastro'>Cadastro</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-item btn ml-md-2 mt-2 cortexto" routerLink='cadastro'>
+                    <a class="nav-item btn ml-md-2 mt-2 cortexto" routerLink='carrinho'>
                         <fa-icon [icon]="faShoppingCart" class="faShoppingCart fa-1x"></fa-icon>
                     </a>
                 </li>
@@ -83,11 +102,13 @@
                             <form action="/login" method="POST" id="form-login">
 
                                 <div>
-                                    <input type="email" id="email" placeholder="Digite o seu e-mail" required>
+                                    <input name="userLoginusuario" type="email" id="email"
+                                        placeholder="Digite o seu e-mail" required [(ngModel)]='userLogin.usuario'>
                                 </div>
 
                                 <div>
-                                    <input type="password" id="password" placeholder="Digite a senha" required>
+                                    <input name="userLoginsenha" type="password" id="password"
+                                        placeholder="Digite a senha" required [(ngModel)]='userLogin.senha'>
                                 </div>
 
                                 <div class="row">
@@ -107,7 +128,7 @@
                                 </div>
 
                                 <div>
-                                    <button id="btn-submit" class="btn BotaoEnviar">Enviar</button>
+                                    <button id="btn-submit" class="btn BotaoEnviar" (click)='entrar()'>Entrar</button>
                                     <h6 class="p-2">Não tem conta?<br><a href="cadastro">cadastre-se</a></h6>
 
                                 </div>

@@ -1,0 +1,33 @@
+<body>
+    <div class="container my-5">
+        <h1 class="text-center">CARRINHO</h1>
+        <hr>
+
+        <div class="row">
+            <!-- Produto  -->
+
+
+            <div class="col-md-12 d-flex justify-content-center flex-wrap">
+                <div class="card col-10 col-md-3 mr-3 ml-3 mt-5 p-3" *ngFor="let produto of listaProdutos">
+                    <a href="#">
+                        <img src="assets/img/produtos/sofas/sofa_adam.png" class="w-100">
+                        <div class="overlay">
+                            <div class="detalhes">Ver Detalhes</div>
+                        </div>
+                    </a>
+                    <h5 class="text-center">{{produto.nome}}</h5>
+                    <h5 class="text-center">Preço: R$ {{produto.valor}}</h5>
+                    <h5 class="text-center">Quantidade em estoque: {{produto.qtdEstoque}}</h5>
+                    <a href="#" class="btn comprar">COMPRAR</a>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+</body>

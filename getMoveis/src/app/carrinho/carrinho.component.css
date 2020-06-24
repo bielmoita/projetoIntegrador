@@ -7,10 +7,6 @@ hr{
 	border: 3px solid #434444;
 }
 
-a{
-	cursor: pointer;
-}
-
 /* Product Grid */
 .produto-grid{
 	padding-bottom: 20px;

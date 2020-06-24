@@ -16,7 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { EditarComponent } from './editar/editar.component';
 import { DeletarComponent } from './deletar/deletar.component';
 import { SofasComponent } from './sofas/sofas.component';
-import { ProdutosComponent } from './produtos/produtos.component'
+import { ProdutosComponent } from './produtos/produtos.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ProdutosComponent } from './produtos/produtos.component'
     EditarComponent,
     DeletarComponent,
     SofasComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    CarrinhoComponent
   ],
   imports: [
     BrowserModule,

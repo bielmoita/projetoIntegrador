@@ -12,6 +12,8 @@ export class CarrinhoComponent implements OnInit {
 
   listaProdutos: Produto[]
 
+  usuario: string = localStorage.getItem('usuario')
+
   constructor(private produtoService: ProdutoService, public router: Router) { }
 
   ngOnInit() {
@@ -22,11 +24,11 @@ export class CarrinhoComponent implements OnInit {
       this.router.navigate(['/home'])
     }
 
-    this.findallProdutos()
+    this.getallCarrinho()
   }
 
-  findallProdutos() {
-    this.produtoService.getAllProdutos().subscribe((resp: Produto[]) => {
+  getallCarrinho() {
+    this.produtoService.GetByCarrinho(this.usuario).subscribe((resp: Produto[]) => {
       this.listaProdutos = resp
     })
   }

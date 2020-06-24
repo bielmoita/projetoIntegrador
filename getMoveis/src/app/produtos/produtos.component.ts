@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../service/produto.service';
 import { Produto } from '../model/Produto';
+import { Usuario } from '../model/Usuario';
 
 @Component({
   selector: 'app-produtos',
@@ -61,4 +62,10 @@ export class ProdutosComponent implements OnInit {
       this.produto = resp
     })
   }
+
+  AdicionarAoCarrinho() {
+    this.produto.usuario = localStorage.getItem('usuario');
+    alert(`Usuario: ${this.produto.usuario}`);
+  }
 }
+

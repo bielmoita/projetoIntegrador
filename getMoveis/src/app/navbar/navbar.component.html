@@ -47,12 +47,13 @@
                 <div *ngIf='authService.btnLogin()'>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle mt-2" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entrar</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item cortexto" href="" data-toggle="modal"
-                                data-target="#login">Entrar</a>
+                            <a class="dropdown-item cortexto" href="" data-toggle="modal" data-target="#login">Login</a>
+                            <a class="dropdown-item cortexto" routerLink='cadastro'>Cadastrar</a>
                         </div>
                     </li>
+
                 </div>
                 <div *ngIf='authService.btnSair()'>
                     <li class="nav-item dropdown">
@@ -63,11 +64,7 @@
                         </div>
                     </li>
                 </div>
-                <div *ngIf='authService.btnLogin()'>
-                    <li class="nav-item">
-                        <a class="btn btn-outline-dark ml-md-2 mt-2 cortexto" routerLink='cadastro'>Cadastro</a>
-                    </li>
-                </div>
+
                 <li class="nav-item">
                     <a class="nav-item btn ml-md-2 mt-2 cortexto" routerLink='carrinho'>
                         <fa-icon [icon]="faShoppingCart" class="faShoppingCart fa-1x"></fa-icon>
@@ -102,8 +99,8 @@
                             <form action="/login" method="POST" id="form-login">
 
                                 <div>
-                                    <input name="userLoginusuario" type="email" id="email"
-                                        placeholder="Digite o seu e-mail" required [(ngModel)]='userLogin.usuario'>
+                                    <input name="userLoginusuario" type="usuario" id="usuario"
+                                        placeholder="Digite o seu usuario" required [(ngModel)]='userLogin.usuario'>
                                 </div>
 
                                 <div>

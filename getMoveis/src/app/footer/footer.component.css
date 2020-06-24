@@ -9,6 +9,7 @@
 .linhaHorizontal{
     border-top: 0.1px solid #ced4da;
     background-color: rgb(248, 249, 250);
+    margin-top: 140px;
 }
 .linhaVertical{
     border-right: 0.1px solid #ced4da;

@@ -11,6 +11,8 @@ export class ProdutosComponent implements OnInit {
 
   listaProdutos: Produto[]
 
+  produto: Produto = new Produto
+
   nome: string = localStorage.getItem('nome')
 
   constructor(private produtoService: ProdutoService) { }
@@ -52,5 +54,11 @@ export class ProdutosComponent implements OnInit {
   buscaSofas() {
     localStorage.setItem('nome', "sofa");
     location.assign('/produtos');
+  }
+
+  findByCodigoDoProduto(codigoDoProduto: number) {
+    this.produtoService.GetById(codigoDoProduto).subscribe((resp: Produto) => {
+      this.produto = resp
+    })
   }
 }

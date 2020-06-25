@@ -9,9 +9,9 @@
 
             <div class="col-md-12 d-flex justify-content-center flex-wrap">
                 <div class="col-10 col-md-3 mr-3 ml-3 mt-5 p-3 produto-grid" *ngFor="let produto of listaProdutos">
-                    <div class="imagem">
+                    <div class="imagem h-50">
                         <a>
-                            <img src="{{produto.imagem}}" class="w-100">
+                            <img src="{{produto.imagem}}" class="w-100 h-100">
                             <div class="overlay" type="button" data-toggle="modal" data-target="#exampleModalCenter">
                                 <div class="detalhes" (click)="findByCodigoDoProduto(produto.codigoDoProduto)">Detalhes
                                 </div>
@@ -27,6 +27,37 @@
 
                 </div>
 
+            </div>
+
+            <!-- Modal ver detalhes -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-6"><img src="{{produto.imagem}}" class="w-100">
+                                    </div>
+                                    <div class="col-md-6 ml-auto">
+                                        <h5>{{produto.nome}}</h5>
+                                        <p class="mt-3"><strong>Categoria: </strong>{{produto.categoria}}.</p>
+                                        <p><strong>Descrição:</strong> {{produto.descricaoProduto}}</p>
+                                        <a href="#" class="btn comprar">ADICIONAR AO CARRINHO</a>
+                                    </div>
+                                    <div class="col-2 offset-10 mt-2 ">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Fechar</button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
 

@@ -2,6 +2,10 @@
     width: 100%;
 }
 
+a {
+    cursor: pointer;
+}
+
 @media (max-width: 1199.98px) {
 .telapequena{
     margin-top: 60px;

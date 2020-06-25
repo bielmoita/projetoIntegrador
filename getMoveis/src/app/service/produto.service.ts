@@ -24,8 +24,12 @@ export class ProdutoService {
     return this.http.get(`http://localhost:8080/produtos/${codigoDoProduto}`)
   }
 
-  GetByCarrinho(usuario: string) {
-    return this.http.get(`http://localhost:8080/produtos/carrinho/${usuario}`)
+  GetByCarrinho(carrinho: string) {
+    return this.http.get(`http://localhost:8080/produtos/carrinho/usuario/${carrinho}`)
+  }
+
+  putProduto(produto: Produto) {
+    return this.http.put('http://localhost:8080/produtos', produto)
   }
 
 }

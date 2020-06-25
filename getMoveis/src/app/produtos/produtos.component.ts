@@ -21,7 +21,8 @@ export class ProdutosComponent implements OnInit {
   ngOnInit(): void {
 
     location.assign;
-    this.pesquisarPorNome()
+    this.pesquisarPorNome();
+
     localStorage.setItem('nome', "a");
   }
 
@@ -64,8 +65,10 @@ export class ProdutosComponent implements OnInit {
   }
 
   AdicionarAoCarrinho() {
-    this.produto.usuario = localStorage.getItem('usuario');
-    alert(`Usuario: ${this.produto.usuario}`);
+    this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
+      this.produto = resp
+      this.produto.carrinho = localStorage.getItem('usuario')
+    })
   }
 }
 

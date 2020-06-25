@@ -8,5 +8,5 @@ export class Produto {
     public categoria: string
     public imagem: string
     public descricaoProduto: string
-    public usuario: string
+    public carrinho: string
 }

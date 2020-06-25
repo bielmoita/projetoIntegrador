@@ -35,7 +35,7 @@
                 <div class="col-10 col-md-3 mr-3 ml-3 mt-5 p-3 produto-grid" *ngFor="let produto of listaProdutos">
                     <div class="imagem">
                         <a>
-                            <img src="assets/img/produtos/sofas/sofa_adam.png" class="w-100">
+                            <img src="{{produto.imagem}}" class="w-100">
                             <div class="overlay" type="button" data-toggle="modal" data-target="#exampleModalCenter">
                                 <div class="detalhes" (click)="findByCodigoDoProduto(produto.codigoDoProduto)">Detalhes
                                 </div>
@@ -45,7 +45,7 @@
                     <h5 class="text-center">{{produto.nome}}</h5>
                     <h5 class="text-center">Preço: R$ {{produto.valor}}</h5>
                     <h5 class="text-center">Quantidade em estoque: {{produto.qtdEstoque}}</h5>
-                    <a class="btn comprar text-center" (click)="AdicionarAoCarrinho()">ADICIONAR
+                    <a class="btn comprar text-center" (click)="AdicionarAoCarrinho(produto)">ADICIONAR
                         AO CARRINHO</a>
 
                 </div>

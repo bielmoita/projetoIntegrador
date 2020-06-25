@@ -8,17 +8,22 @@
 
 
             <div class="col-md-12 d-flex justify-content-center flex-wrap">
-                <div class="card col-10 col-md-3 mr-3 ml-3 mt-5 p-3" *ngFor="let produto of listaProdutos">
-                    <a href="#">
-                        <img src="assets/img/produtos/sofas/sofa_adam.png" class="w-100">
-                        <div class="overlay">
-                            <div class="detalhes">Ver Detalhes</div>
-                        </div>
-                    </a>
+                <div class="col-10 col-md-3 mr-3 ml-3 mt-5 p-3 produto-grid" *ngFor="let produto of listaProdutos">
+                    <div class="imagem">
+                        <a>
+                            <img src="{{produto.imagem}}" class="w-100">
+                            <div class="overlay" type="button" data-toggle="modal" data-target="#exampleModalCenter">
+                                <div class="detalhes" (click)="findByCodigoDoProduto(produto.codigoDoProduto)">Detalhes
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
                     <h5 class="text-center">{{produto.nome}}</h5>
                     <h5 class="text-center">Preço: R$ {{produto.valor}}</h5>
                     <h5 class="text-center">Quantidade em estoque: {{produto.qtdEstoque}}</h5>
-                    <a href="#" class="btn comprar">COMPRAR</a>
+                    <a class="btn comprar text-center" (click)="Remover(produto)">REMOVER DO
+                        CARRINHO</a>
 
                 </div>
 

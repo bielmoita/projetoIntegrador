@@ -35,4 +35,18 @@ export class CarrinhoComponent implements OnInit {
     })
   }
 
+  Remover(produto: Produto) {
+    produto.carrinho = null
+    this.produtoService.putProduto(produto).subscribe((resp: Produto) => {
+      this.produto = resp
+    })
+    location.assign('carrinho')
+  }
+
+  findByCodigoDoProduto(codigoDoProduto: number) {
+    this.produtoService.GetById(codigoDoProduto).subscribe((resp: Produto) => {
+      this.produto = resp
+    })
+  }
+
 }

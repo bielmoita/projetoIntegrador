@@ -14,6 +14,8 @@ export class ProdutosComponent implements OnInit {
 
   produto: Produto = new Produto
 
+  usuario: string = localStorage.getItem('usuario')
+
   nome: string = localStorage.getItem('nome')
 
   constructor(private produtoService: ProdutoService) { }
@@ -64,10 +66,10 @@ export class ProdutosComponent implements OnInit {
     })
   }
 
-  AdicionarAoCarrinho() {
-    this.produtoService.putProduto(this.produto).subscribe((resp: Produto) => {
+  AdicionarAoCarrinho(produto: Produto) {
+    produto.carrinho = localStorage.getItem('usuario')
+    this.produtoService.putProduto(produto).subscribe((resp: Produto) => {
       this.produto = resp
-      this.produto.carrinho = localStorage.getItem('usuario')
     })
   }
 }
